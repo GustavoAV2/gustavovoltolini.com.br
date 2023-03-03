@@ -1,0 +1,229 @@
+/* Reset styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Global styles */
+  body {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #333;
+  }
+  main{
+    padding-bottom: 35px;
+  }
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  .list {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  
+  /* Header styles */
+  header {
+    background-color: #262626;
+    color: #ffffff;
+    padding: 10px;
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+  
+  header a {
+    color: #fff;
+    text-decoration: none;
+    margin-left: 20px;
+  }
+  
+  nav ul {
+    list-style: none;
+    display: flex;
+  }
+  
+  nav li {
+    margin-right: 20px;
+  }
+  
+  /* Form styles */
+  form {
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+  }
+  
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  label {
+    font-weight: bold;
+    margin-bottom: 10px;
+    display: block;
+  }
+  
+  input[type="text"],
+  select {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    margin: 0;
+    padding: 0;
+    line-height: 1.5;
+  }
+  
+  input[type="text"] {
+    display: block;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: none;
+    background-color: #f2f2f2;
+    margin-bottom: 20px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  select {
+    display: block;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: none;
+    background-color: #f2f2f2;
+    margin-bottom: 20px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  button {
+    background-color: #262626;
+    color: #ffffff;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #4d4d4d;
+  }
+  
+  h2 {
+    font-size: 22px;
+    font-weight: bold;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    color: #262626;
+  }
+  
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-size: 18px;
+    cursor: pointer;
+  }
+  
+  li {
+    padding: 10px;
+    background-color: #f2f2f2;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #333;
+    color: #fff;
+  }
+  .to-watch{
+    margin-right: 15px;
+    max-width: 100%;
+  }
+  .watched{
+    margin-right: 15px;
+    max-width: 100%;
+  }
+  .footer-content {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+
+  #sendJsonForm{
+    display: none;
+  }
+  #txtJson{
+    width: 100%;
+  }
+  
+/* Media queries */
+@media screen and (max-width: 768px) {
+
+    /* Header styles */
+    header {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    nav ul {
+      flex-direction: column;
+    }
+  
+    nav li {
+      margin-right: 0;
+      margin-bottom: 10px;
+    }
+  
+    header a {
+      margin-left: 0;
+    }
+  
+    /* Form styles */
+    form {
+      margin-top: 30px;
+    }
+  
+    label {
+      font-size: 16px;
+    }
+  
+    input[type="text"],
+    select {
+      font-size: 14px;
+    }
+  
+    button {
+      font-size: 14px;
+    }
+  
+    /* List styles */
+    .list {
+      flex-direction: column;
+    }
+    .watched{
+      display: none;
+    }
+    .watched h3{
+      display: none;
+    }
+    li {
+      padding: 10px;
+      font-size: 14px;
+    }
+  }
+  
