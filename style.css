@@ -15,14 +15,6 @@ Uso: Essa cor é ideal para o fundo do site, proporcionando uma aparência limpa
 
 */
 
-body{
-  background-color: darkgray;
-  color: whitesmoke;
-}
-header{
-  margin-top: 10px;
-}
-
 .navbar{
   display: flex;
   justify-content: space-around;
@@ -33,16 +25,43 @@ header{
 .navbar-brand{
   font-size: 40px;
 }
-.sub-title{  
-  font-size: 25px;
-}
 .proj-links{
   display: flex;
   flex-direction: column;
 }
+
+/* Default */
+h1{
+  color: #000000;
+}
+.secundary-text{
+  font-size: 25px;
+  color: #777777;
+}
+.primary-text{
+  color: #333333;
+}
 .body-content{
   padding: 25px;
   margin-top: 15px;
-  background-color: #212529;
+  background-color: #f5f5f5;
 }
-
+button{
+  background-color: #3498db;
+}
+a{
+  color: #0099cc;
+}
+header a{
+  color: #f5f5f5;;
+  text-decoration: none;
+}
+header a:hover{
+  color: #3498db;
+}
+body{
+  background-color: #ffffff;
+}
+header{
+  margin-top: 10px;
+}
