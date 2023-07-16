@@ -19,13 +19,27 @@ body{
   background-color: darkgray;
   color: whitesmoke;
 }
+header{
+  margin-top: 10px;
+}
 
 .navbar{
+  display: flex;
+  justify-content: space-around;
   padding-right: 5%;
   padding-left: 5%;
   margin-bottom: 35px;
 }
-
+.navbar-brand{
+  font-size: 40px;
+}
+.sub-title{  
+  font-size: 25px;
+}
+.proj-links{
+  display: flex;
+  flex-direction: column;
+}
 .body-content{
   padding: 25px;
   margin-top: 15px;
