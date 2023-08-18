@@ -5,18 +5,18 @@
     <title>Gustavo Voltolini</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../style.css">
   </head>
 
   <body>
     <header>
-      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <nav class="box-container navbar navbar-expand-lg navbar-dark bg-dark ">
         <div>
-          <a class="navbar-brand" href="#">Gustavo Voltolini</a>
-          <p class="sub-title">Desenvolvedor Pleno</p>
+          <a class="navbar-brand" href="/">Gustavo Voltolini</a>
+          <p class="secundary-text">Desenvolvedor Pleno</p>
         </div>
-
-        <a class="nav-link" href="./portfolio.html">Resumo</a>
+    
+        <a href="../index.html">Inicio</a>
       </nav>
     </header>
 
@@ -24,19 +24,47 @@
       <div class="row">
         <div class="col-8">
           <div class="body-content">
-            <h2>Processador de arquivos CNAB</h2>
-            
+            <h2>FLOW-168</h2>
             <!-- Desenvolvedor Pleno -->
-            <p><strong>API de cobrança</strong> - Ambev Tech, Blumenau – o momento</p> 
-            <p> 
-              Esta é a API principal para o processamento de Remessa e a criação das cobranças e QRCode. A API recebe requisições
-              tanto da Interface FrontEnd pelo usuário, quanto do <a href="https://github.com/GustavoAV2/ShipmentFileProcessor">worker</a> que está monitorando o diretório de arquivos de remessa.
-              A API tem a responsabilidade de interpretar os arquivos, gerar o QRCode de cobrança e criar as respostas correspondentes no formato do arquivo de retorno CNAB 750. 
-              Após o processamento, o arquivo de retorno é salvo em um diretório de saída.
+            <p><strong>Aplicação faseada de RPA para </strong>Simplificação de tarefas</p> 
+              <p> 
+                Desenvolvemos uma aplicação faseada para simplificar os processos internos da BestCenter, a empresa patrocinadora do Hackathon.
+                A solução possui três blocos principais:
+              </p>
+
+              <ul>
+                <li>
+                  Formulário dinâmico
+                </li>
+                <li>
+                  Orquestrador de E-mails
+                </li>
+                <li>
+                  Analisador de crédito
+                </li>
+              </ul>
             </p>
-            `
+
+            <h3>Formulario Dinâmico</h3>
+            <hr>
+            <p>
+              Otimização exibição de campos para usuário, com campos mais acertivos coletando apenas 
+              os dados necessários que preencham a documentação necessárioa conforme o tipo de cliente 
             </p>
-            <br>
+
+            <h3>Analisador de crédito</h3>
+            <hr>
+            <p>
+              O analisador de crédito tem a função de centralizar as informação das fontes disponiveis, 
+              analisar os dados e com base nisso gerar uma nivel de risco, dentro do hackathon simulamos 
+              respostas da API do Serasa e da Receita Federal para desenvolver a lógica de 
+              analise de crédito do Cliente
+            </p>
+
+            
+            <iframe width="100%" height="445" src="https://www.youtube.com/embed/z0mQL0OW34g">
+            </iframe>
+
           </div>
         </div>
   
@@ -45,9 +73,9 @@
             <h2>Projetos</h2>
             <hr>
             <div class="proj-links">
-              <a href="">Hackathon Citi</a>
-              <a href="">Hackathon Digio</a>
-              <a href="">Hackathon São Carlos</a>
+              <a  href="./citi.html">Hackathon Citi</a>
+              <a href="./digio.html">Hackathon Digio</a>
+              <a aria-disabled class="active">Hackathon São Carlos</a>
             </div>
           </div>
         </div>
@@ -55,6 +83,5 @@
     </div>
     <br>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
   </body>
 </html>

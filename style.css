@@ -14,7 +14,12 @@ Cor de fundo: #FFFFFF (Branco)
 Uso: Essa cor é ideal para o fundo do site, proporcionando uma aparência limpa e arejada. O branco ajuda a destacar o conteúdo e torna a leitura mais fácil.
 
 */
-
+a{
+  text-decoration: none;
+}
+a:hover{
+  text-decoration: underline;
+}
 .navbar{
   display: flex;
   justify-content: space-around;
@@ -28,6 +33,10 @@ Uso: Essa cor é ideal para o fundo do site, proporcionando uma aparência limpa
 .proj-links{
   display: flex;
   flex-direction: column;
+}
+.active{
+  color: #0099cc;
+  text-decoration: underline;
 }
 
 /* Default */

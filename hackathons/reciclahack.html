@@ -9,9 +9,16 @@
   </head>
 
   <body>
-    <div id="header-content">
-
-    </div>
+    <header>
+      <nav class="box-container navbar navbar-expand-lg navbar-dark bg-dark ">
+        <div>
+          <a class="navbar-brand" href="/">Gustavo Voltolini</a>
+          <p class="secundary-text">Desenvolvedor Pleno</p>
+        </div>
+    
+        <a href="../index.html">Inicio</a>
+      </nav>
+    </header>
 
     <div class="container">
       <div class="row">
@@ -47,21 +54,6 @@
       </div>
     </div>
     <br>
-
-    <script>
-        // Seletor do elemento onde o conteúdo será inserido
-        const file = "../components/header.html";
-        const contentContainer = document.getElementById('header-content');
-        
-        fetch(file).then(response => response.text()).then(html => {
-            contentContainer.innerHTML = html;
-        })
-        .catch(error => {
-            console.error('Ocorreu um erro ao carregar o arquivo HTML:', error);
-        });
-        
-        insertHTML('nome-do-arquivo.html');
-    </script>
 
   </body>
 </html>
