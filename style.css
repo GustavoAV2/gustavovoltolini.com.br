@@ -38,6 +38,9 @@ a:hover{
   color: #0099cc;
   text-decoration: underline;
 }
+.title{
+  color: #333333;
+}
 
 /* Default */
 h1{

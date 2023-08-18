@@ -1,73 +1,79 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8">
-    <title>Gustavo Voltolini</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
-    <link rel="stylesheet" href="../style.css">
-  </head>
 
-  <body>
-    <header>
-      <nav class="box-container navbar navbar-expand-lg navbar-dark bg-dark ">
-        <div>
-          <a class="navbar-brand" href="/">Gustavo Voltolini</a>
-          <p class="secundary-text">Desenvolvedor Pleno</p>
-        </div>
-    
-        <a href="../index.html">Inicio</a>
-      </nav>
-    </header>
+<head>
+  <meta charset="UTF-8">
+  <title>Gustavo Voltolini</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+  <link rel="stylesheet" href="../style.css">
+</head>
 
-    <div class="container">
-      <div class="row">
-        <div class="col-8">
-          <div class="body-content">
-            <h2>Processador de arquivos CNAB</h2>
-            
-            <!-- Desenvolvedor Pleno -->
-            <p><strong>API de cobrança</strong> - Ambev Tech, Blumenau – o momento</p> 
-            <p> 
-              Esta é a API principal para o processamento de Remessa e a criação das cobranças e QRCode. A API recebe requisições
-              tanto da Interface FrontEnd pelo usuário, quanto do <a href="https://github.com/GustavoAV2/ShipmentFileProcessor">worker</a> que está monitorando o diretório de arquivos de remessa.
-              A API tem a responsabilidade de interpretar os arquivos, gerar o QRCode de cobrança e criar as respostas correspondentes no formato do arquivo de retorno CNAB 750. 
-              Após o processamento, o arquivo de retorno é salvo em um diretório de saída.
-            </p>
-            `
-            </p>
-            <br>
-          </div>
+<body>
+  <header>
+    <nav class="box-container navbar navbar-expand-lg navbar-dark bg-dark ">
+      <div>
+        <a class="navbar-brand" href="/">Gustavo Voltolini</a>
+        <p class="secundary-text">Desenvolvedor Pleno</p>
+      </div>
+
+      <a href="../index.html">Inicio</a>
+    </nav>
+  </header>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-8">
+        <div class="body-content">
+          <h2 class="title">Desafio proposto</h2>
+          <p>
+            ...
+          </p>
+
+          <strong>Solução apresentada:</strong>
+          <h3>API de cobrança</h3>
+
+          <p>
+            ...
+          </p>
+
+          <iframe width="100%" height="445" src="https://www.youtube.com/embed/8P8Mcgj3x5k">
+          </iframe>
+
+          <br>
         </div>
-  
-        <div class="col-4">
-          <div class="body-content">
-            <h2>Projetos</h2>
-            <hr>
-            <div class="proj-links">
-              <a  href="./citi.html">Hackathon Citi</a>
-              <a aria-disabled class="active">Hackathon Digio</a>
-              <a href="./saocarlos.html">Hackathon São Carlos</a>
-            </div>
+      </div>
+
+      <div class="col-4">
+        <div class="body-content">
+          <h2>Projetos</h2>
+          <hr>
+          <div class="proj-links">
+            <a href="./citi.html">Hackathon Citi</a>
+            <a aria-disabled class="active">Hackathon Digio</a>
+            <a href="./saocarlos.html">Hackathon São Carlos</a>
           </div>
         </div>
       </div>
     </div>
-    <br>
+  </div>
+  <br>
 
-    <script>
-      // Seletor do elemento onde o conteúdo será inserido
-      const file = "../components/header.html";
-      const contentContainer = document.getElementById('header-content');
-      
-      fetch(file).then(response => response.text()).then(html => {
-          contentContainer.innerHTML = html;
-      })
+  <script>
+    // Seletor do elemento onde o conteúdo será inserido
+    const file = "../components/header.html";
+    const contentContainer = document.getElementById('header-content');
+
+    fetch(file).then(response => response.text()).then(html => {
+      contentContainer.innerHTML = html;
+    })
       .catch(error => {
-          console.error('Ocorreu um erro ao carregar o arquivo HTML:', error);
+        console.error('Ocorreu um erro ao carregar o arquivo HTML:', error);
       });
-      
-      insertHTML('nome-do-arquivo.html');
-    </script>
-  </body>
+
+    insertHTML('nome-do-arquivo.html');
+  </script>
+</body>
+
 </html>
