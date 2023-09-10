@@ -27,15 +27,16 @@
       <div class="col-8">
         <div class="body-content">
           <h2>HackaConnection
-            <p class="second-position"> 2ª lugar</p>
+            <p class="second-position my-1"> 2ª lugar</p>
           </h2>
 
-          <p>Prêmio: R$10.800,00</p>
-          <p>Data: 18/06/2023</p>
-          <p>Equipe: <a href="">Gustavo Antunes Voltolini</a> e <a href="">Joshua Patrick Loesch Alves</a></p>
+          <p class="my-0">Prêmio: R$10.800,00</p>
+          <p class="my-0">Data: 18/06/2023</p>
+          <p class="mb-2">Equipe: <a href="">Gustavo Antunes Voltolini</a> e <a href="">Joshua Patrick Loesch Alves</a></p>
 
           <iframe width="100%" height="445" src="https://www.youtube.com/embed/Ch7t2-1auOA">
           </iframe>
+          <hr>
 
           <h2>Desafio proposto</h2>
           <p>
@@ -72,50 +73,49 @@
               Criação de uma solução que permita processar 100 mil ou mais solicitações de QRCode por hora.
             </li>
           </ul>
-
-          <br>
           <hr>
 
-          <h2>Solução apresentada</h2>
-          <strong>Processador de arquivos CNAB</strong>
-          <img src="../assets/images/SitiSolution-Arquitetura.jpg" alt="">
-          <hr>
-
-          <!-- Desenvolvedor Pleno -->
-          <strong>API de cobrança</strong>
-          <p>
-            Esta é a API principal para o processamento de Remessa e a criação das cobranças e QRCode. A API recebe
-            requisições
-            tanto da Interface FrontEnd pelo usuário, quanto do <a target="_blank"
-              href="https://github.com/GustavoAV2/ShipmentFileProcessor">worker</a> que está monitorando o diretório de
-            arquivos de remessa.
-            A API tem a responsabilidade de interpretar os arquivos, gerar o QRCode de cobrança e criar as respostas
-            correspondentes no formato do arquivo de retorno CNAB 750.
-            Após o processamento, o arquivo de retorno é salvo em um diretório de saída.
-          </p>
-          <img src="../assets/images/Fluxograma-Api.jpg" alt="">
-          <hr>
-
-          <strong>Monitoramento de diretório de arquivos de remessa</strong>
-          <p>
-            Este projeto consiste em um script Python que utiliza a biblioteca watchdog para monitorar um diretório
-            específico em busca de novos arquivos de remessa.
-            Quando um novo arquivo é detectado, o arquivo é coletado e enviado para a
-            <a href="https://github.com/GustavoAV2/ApiShipmentIntegration">API De Cobrança</a>
-            onde esse arquivo será processado. Este processador é responsavel por monitorar e encaminhar os arquivos a
-            API, que por sua vez tem a responsabilidade de interpretar os arquivos, gerar o QRCode de cobrança e
-            criar as respostas correspondentes no formato do arquivo de retorno CNAB 750.
-            Após o processamento, o arquivo de retorno é salvo em um diretório de saída.
-          </p>
-          <img src="../assets/images/Fluxograma-Process.jpg" alt="">
-          <hr>
-
-          <strong>Interface para o usuário (Frontend)</strong>
-          <p>
-            <a href="https://github.com/jplrhae/qrgen-citi-frontend">Interface frontend</a>
-            desenvolvida com React
-          </p>
-
+          <div class="d-flex flex-column">
+            <h2>Solução apresentada</h2>
+  
+            <strong>Processador de arquivos CNAB</strong>
+            <img src="../assets/images/Citi/SitiSolution-Arquitetura.jpg" alt="" class="my-1">
+  
+            <strong>API de cobrança</strong>
+            <a target="_blank" href="https://github.com/GustavoAV2/ApiShipmentIntegration">Repositório API</a>
+            <p>
+              Esta é a API principal para o processamento de Remessa e a criação das cobranças e QRCode. A API recebe
+              requisições
+              tanto da Interface FrontEnd pelo usuário, quanto do <a target="_blank"
+                href="https://github.com/GustavoAV2/ShipmentFileProcessor">worker</a> que está monitorando o diretório de
+              arquivos de remessa.
+              A API tem a responsabilidade de interpretar os arquivos, gerar o QRCode de cobrança e criar as respostas
+              correspondentes no formato do arquivo de retorno CNAB 750.
+              Após o processamento, o arquivo de retorno é salvo em um diretório de saída.
+            </p>
+            <img src="../assets/images/Fluxograma-Api.jpg" alt="">
+  
+            <strong>Monitoramento de diretório de arquivos de remessa</strong>
+            <a target="_blank" href="https://github.com/GustavoAV2/ShipmentFileProcessor">Repositório Worker</a>
+            <p>
+              Este projeto consiste em um script Python que utiliza a biblioteca watchdog para monitorar um diretório
+              específico em busca de novos arquivos de remessa.
+              Quando um novo arquivo é detectado, o arquivo é coletado e enviado para a
+              <a target="_blank" href="https://github.com/GustavoAV2/ApiShipmentIntegration">API De Cobrança</a>
+              onde esse arquivo será processado. Este processador é responsavel por monitorar e encaminhar os arquivos a
+              API, que por sua vez tem a responsabilidade de interpretar os arquivos, gerar o QRCode de cobrança e
+              criar as respostas correspondentes no formato do arquivo de retorno CNAB 750.
+              Após o processamento, o arquivo de retorno é salvo em um diretório de saída.
+            </p>
+            <img src="../assets/images/Fluxograma-Process.jpg" alt="">
+            
+            <strong>Interface para o usuário (Frontend)</strong>
+            <a target="_blank" href="https://github.com/jplrhae/qrgen-citi-frontend">Repositório Frontend</a>
+            <p>
+              Interface frontend
+              desenvolvida com React
+            </p>
+          </div>
         </div>
       </div>
 
