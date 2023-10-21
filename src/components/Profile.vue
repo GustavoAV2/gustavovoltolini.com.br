@@ -5,16 +5,15 @@
         <div class="space-y-5">
           <!-- Start Left Side -->
 
-          <div class="shadow rounded-xl overflow-hidden">
+          <div class="overflow-hidden">
             <!-- Start User Block -->
-            <div class="pt-14 p-7 bg-white relative">
-              <span class="status-badge bg-gray-400">Gustavo Antunes Voltolini</span>
+            <div class="pt-2 p-7 relative text-center">
               <a href="/personal_cv/"
-                ><img src="../assets/images/profile-icon2.jpg" alt="Avatar" class="user-photo"
+                ><img src="../assets/images/profile-icon2.jpg" alt="Avatar" class="rounded-3xl"
               /></a>
               <div class="text-lg font-semibold mb-1.5">Gustavo Voltolini</div>
               <div class="text-sm text-gray-400 mb-7">Backend Developer</div>
-              <div class="flex group">
+              <div class="flex group justify-center items-center">
                 <button class="download-btn">Download CV</button>
                 <button class="download-btn-icon">
                   <svg
@@ -42,8 +41,14 @@
             <h2 class="block-title text-xl">Informações</h2>
             <div class="space-y-4">
               <div class="flex justify-between">
-                <div class="text-gray-400">Experience</div>
-                <div class="font-medium text-right text-gray-600">3 years</div>
+                <div class="text-gray-400">Experiencia:</div>
+                <div class="font-medium text-right text-gray-600">3 anos</div>
+              </div>
+              <div class="flex flex-col justify-between">
+                <div class="text-gray-400">Email:</div>
+                <div class="font-medium text-right text-gray-600">
+                  gustavoant.voltolini@gmail.com
+                </div>
               </div>
             </div>
           </div>
@@ -80,11 +85,6 @@
             </p>
 
             <div class="flex flex-col space-y-4">
-              <a href="#0" class="mail-link social-link-hover">
-                <i class="bx bx-at text-xl"></i>
-                <span>gustavoant.voltolini@email.com</span>
-              </a>
-
               <ul class="flex space-x-5">
                 <li>
                   <a
@@ -101,23 +101,11 @@
                 </li>
               </ul>
             </div>
-
             <div class="border-t border-gray-200 my-5"></div>
-
-            <ul class="flex space-x-8 font-medium">
-              <li>
-                <a href="/personal_cv/index.html" class="menu-link-active menu-link-hover"
-                  >Resumo</a
-                >
-              </li>
-              <li>
-                <a href="/hackathons" class="menu-link menu-link-hover">Projetos</a>
-              </li>
-            </ul>
           </div>
           <!-- End About Me Block -->
 
-          <div class="p-7 block-section">
+          <div class="p-7 pt-2 block-section">
             <!-- Start Experience Block -->
             <h2 class="block-title">Experiencia</h2>
             <div class="mb-5 item-section">
