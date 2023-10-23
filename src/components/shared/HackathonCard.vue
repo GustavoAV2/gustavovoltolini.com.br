@@ -97,7 +97,7 @@ export default {
 
         <div class="mt-9 flex flex-1 items-end justify-center gap-6">
           <a
-            href="https://github.com/mateusfg7/qrcode-generator"
+            href="https://github.com/GustavoAV2/"
             target="_blank"
             rel="noreferrer"
             class="flex items-center gap-2 rounded-2xl border border-[#181717] p-4 text-[#181717] hover:bg-[#181717] hover:text-[#F6F8FA] dark:border-[#F6F8FA] dark:text-[#F6F8FA] dark:hover:bg-[#F6F8FA] hover:dark:text-[#181717]"
