@@ -1,3 +1,13 @@
+<script>
+export default {
+  methods: {
+    downloadCV() {
+      alert('O download ainda não está disponivel, obrigado pelo interesse! ;)')
+    }
+  }
+}
+</script>
+
 <template>
   <div class="bg-gray-100 antialiased rounded-lg w-auto inline-block">
     <link
@@ -11,8 +21,8 @@
           <div class="text-3xl font-semibold mb-1.5">Gustavo Voltolini</div>
           <div class="text-sm text-gray-400 mb-7">Backend Developer</div>
           <div class="flex group justify-center items-center">
-            <button class="download-btn">Download CV</button>
-            <button class="download-btn-icon">
+            <button class="download-btn" @click="downloadCV()">Download CV</button>
+            <button class="download-btn-icon" @click="downloadCV()">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 class="h-6 w-6"
@@ -109,11 +119,8 @@
         <div class="p-7 pt-2 block-section">
           <!-- Start Experience Block -->
           <h2 class="block-title text-xl mb-5">Experiência</h2>
-          <div class="mb-5 item-section">
-            <div class="company-logo" style="background-color: #1da1f2">
-              <i class="bx bxl-twitter text-3xl"></i>
-            </div>
 
+          <div class="mb-5 item-section">
             <div class="w-full space-y-5">
               <div class="font-medium">Desenvolvedor Pleno</div>
 
@@ -151,30 +158,25 @@
                   </div>
                 </div>
               </div>
+              <p class="text-gray-600">
+                • Desenvolvimento do Megatron, uma solução em C# .NET 6 que automatiza a resolução
+                de chamados dos clientes da Ambev. Esse produto coleta, analisa e trata chamados sem
+                intervenção humana durante todo o processo. para microsserviços.
+              </p>
+              <p class="text-gray-600">
+                • Manutenção do ERP Gestor, uma aplicação web que atende as necessidades de mais de
+                170 franquias da Ambev, com mais de 60.000 pontos de vendas atendidos. Também
+                trabalhando na migração de funcionalidades legadas para microsserviços.
+              </p>
+
+              <div class="border-b border-gray-200 mt-5"></div>
             </div>
-
-            <p class="text-gray-600">
-              • Desenvolvimento do Megatron, uma solução em C# .NET 6 que automatiza a resolução de
-              chamados dos clientes da Ambev. Esse produto coleta, analisa e trata chamados sem
-              intervenção humana durante todo o processo. para microsserviços.
-            </p>
-            <br />
-            <p class="text-gray-600">
-              • Manutenção do ERP Gestor, uma aplicação web que atende as necessidades de mais de
-              170 franquias da Ambev, com mais de 60.000 pontos de vendas atendidos. Também
-              trabalhando na migração de funcionalidades legadas para microsserviços.
-            </p>
-
-            <div class="border-b border-gray-200 mt-5"></div>
           </div>
 
           <div class="mb-5 item-section">
-            <div class="company-logo" style="background-color: #0061ff">
-              <i class="bx bxl-dropbox text-3xl"></i>
-            </div>
-
             <div class="w-full space-y-5">
               <div class="font-medium">Desenvolvedor Junior (Nível II)</div>
+
               <div class="flex flex-row justify-between">
                 <div class="flex flex-col items-center align-middle">
                   <div>
@@ -209,6 +211,7 @@
                   </div>
                 </div>
               </div>
+
               <p class="text-gray-600">
                 • Idealização e desenvolvimento do Marvin 2.0 em Python, MongoDb, FastAPI, DataDog e
                 processamento assíncrono. O Marvin 2.0 automatiza análises e resoluções de cenários
@@ -219,7 +222,8 @@
                 • Manutenção e aprendizado de C# .NET para o Mesh, plataforma de integração com o
                 Bees Care.
               </p>
-              <div class="border-b border-gray-200"></div>
+
+              <div class="border-b border-gray-200 mt-5"></div>
             </div>
           </div>
 
@@ -296,7 +300,7 @@
                   </div>
                 </div>
                 <div class="flex flex-col">
-                  <div class="job-item-badge">Tempo integral</div>
+                  <div class="job-item-badge">Meio periodo</div>
                   <div class="flex item-header-info">
                     <div class="pr-2">
                       <svg
