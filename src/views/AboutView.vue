@@ -8,8 +8,8 @@ export default {
 </script>
 
 <template>
-  <HeaderComponent></HeaderComponent>
-  <div class="h-full">
+  <div class="flex flex-col min-h-screen">
+    <HeaderComponent></HeaderComponent>
     <AboutLinks></AboutLinks>
   </div>
 </template>
