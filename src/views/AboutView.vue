@@ -1,10 +1,10 @@
 <script>
-import HeaderComponent from '@/components/shared/Header.vue'
-import AboutLinks from '@/components/AboutLinks.vue'
+import HeaderComponent from "../components/shared/Header.vue";
+import AboutLinks from "../components/AboutLinks.vue";
 
 export default {
-  components: { HeaderComponent, AboutLinks }
-}
+  components: { HeaderComponent, AboutLinks },
+};
 </script>
 
 <template>
