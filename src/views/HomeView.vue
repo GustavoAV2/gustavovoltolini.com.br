@@ -12,13 +12,6 @@ export default {
       descriptions: ["Backend Developer", "Full Stack Developer"],
     };
   },
-  methods: {
-    waitTime(miliseconds) {
-      setTimeout(() => {
-        console.log("Timeout acionado");
-      }, miliseconds);
-    },
-  },
   created() {
     let descIndex = 0;
     let subtext = this.descriptions[descIndex];

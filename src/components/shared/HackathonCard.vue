@@ -10,14 +10,17 @@ export default {
   },
   data() {
     return {
-      srcPath: "@/src/assets/images/",
       classPosition: "",
       numberPosition: "",
     };
   },
-  methods: {},
+  computed: {
+    srcPath() {
+      return "/images/" + this.srcImage;
+    },
+  },
   created() {
-    this.srcPath = this.srcPath + this.srcImage;
+    console.log(this.srcPath);
     if (this.position == "first") {
       this.numberPosition = "1º";
       this.classPosition = "first-position";

@@ -13,7 +13,6 @@ export default {
   methods: {},
   created() {
     this.tags = this.rawTags.split(",");
-    console.log(this.tags);
   },
 };
 </script>
