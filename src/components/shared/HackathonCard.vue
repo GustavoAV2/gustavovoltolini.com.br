@@ -6,32 +6,32 @@ export default {
     description: String,
     position: String,
     srcImage: String,
-    date: String
+    date: String,
   },
   data() {
     return {
-      srcPath: '/src/assets/images/',
-      classPosition: '',
-      numberPosition: ''
-    }
+      srcPath: "/src/assets/images/",
+      classPosition: "",
+      numberPosition: "",
+    };
   },
   methods: {},
   created() {
-    this.srcPath = this.srcPath + this.srcImage
-    if (this.position == 'first') {
-      this.numberPosition = '1º'
-      this.classPosition = 'first-position'
-    } else if (this.position == 'second') {
-      this.numberPosition = '2º'
-      this.classPosition = 'second-position'
-    } else if (this.position == 'third') {
-      this.numberPosition = '3º'
-      this.classPosition = 'third-position'
+    this.srcPath = this.srcPath + this.srcImage;
+    if (this.position == "first") {
+      this.numberPosition = "1º";
+      this.classPosition = "first-position";
+    } else if (this.position == "second") {
+      this.numberPosition = "2º";
+      this.classPosition = "second-position";
+    } else if (this.position == "third") {
+      this.numberPosition = "3º";
+      this.classPosition = "third-position";
     } else {
-      this.numberPosition = 'Não posicionado'
+      this.numberPosition = "Não posicionado";
     }
-  }
-}
+  },
+};
 </script>
 
 <template>
@@ -41,10 +41,11 @@ export default {
       will-change: transform;
       min-width: 512px;
       transition: all 400ms cubic-bezier(0.03, 0.98, 0.52, 0.99) 0s;
-      transform: perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1);
+      transform: perspective(1000px) rotateX(0deg) rotateY(0deg)
+        scale3d(1, 1, 1);
     "
   >
-    <div class="flex h-full flex-col bg-neutral-100 dark:bg-neutral-950">
+    <div class="flex h-full flex-col bg-neutral-100">
       <div class="h-56 w-full">
         <img
           alt="Project image"
@@ -61,7 +62,7 @@ export default {
       <div class="flex flex-1 flex-col p-5">
         <div>
           <div
-            class="mb-10 flex flex-col items-center gap-5 text-2xl dark:text-neutral-50 md:mb-4 md:flex-row"
+            class="mb-10 flex flex-col items-center gap-5 text-2xl md:mb-4 md:flex-row"
           >
             <div class="flex flex-col">
               <h2 class="font-bold">{{ name }}</h2>
@@ -100,7 +101,7 @@ export default {
             href="https://github.com/GustavoAV2/"
             target="_blank"
             rel="noreferrer"
-            class="flex items-center gap-2 rounded-2xl border border-[#181717] p-4 text-[#181717] hover:bg-[#181717] hover:text-[#F6F8FA] dark:border-[#F6F8FA] dark:text-[#F6F8FA] dark:hover:bg-[#F6F8FA] hover:dark:text-[#181717]"
+            class="flex items-center gap-2 rounded-2xl border border-[#181717] p-4 text-[#181717] hover:bg-[#181717] hover:text-[#F6F8FA]"
             >Ver mais
           </a>
         </div>
@@ -132,7 +133,11 @@ export default {
           height: 753.055px;
           transform: rotate(-180deg) translate(-50%, -50%);
           opacity: 0;
-          background: linear-gradient(0deg, rgba(255, 255, 255, 0) 0%, rgb(255, 255, 255) 100%);
+          background: linear-gradient(
+            0deg,
+            rgba(255, 255, 255, 0) 0%,
+            rgb(255, 255, 255) 100%
+          );
           transition: opacity 400ms cubic-bezier(0.03, 0.98, 0.52, 0.99) 0s;
         "
       ></div>

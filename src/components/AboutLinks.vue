@@ -2,26 +2,28 @@
 export default {
   data() {
     return {
-      copied: false
-    }
+      copied: false,
+    };
   },
   methods: {
     copyToClipboard() {
-      this.copied = true
-      navigator.clipboard.writeText('gustavoant.voltolini@gmail.com')
+      this.copied = true;
+      navigator.clipboard.writeText("gustavoant.voltolini@gmail.com");
       setTimeout(() => {
-        this.copied = false
-      }, 1000)
-    }
-  }
-}
+        this.copied = false;
+      }, 1000);
+    },
+  },
+};
 </script>
 
 <template>
-  <div class="flex-1 flex-col items-center align-middle justify-center text-xl pt-10">
+  <div
+    class="flex-1 flex-col items-center align-middle justify-center text-xl pt-10"
+  >
     <div class="flex flex-col text-center align-middle items-center pt-10">
       <div class="flex justify-center">
-        <span class="rounded bg-opacity-10 p-1 dark:bg-neutral-100 dark:bg-opacity-10"
+        <span class="rounded bg-opacity-10 p-1"
           ><svg
             xmlns="http://www.w3.org/2000/svg"
             width="1em"
@@ -61,7 +63,7 @@ export default {
 
     <div class="flex flex-col text-center align-middle items-center pt-10">
       <div class="flex">
-        <span class="rounded bg-opacity-10 p-1 dark:bg-[#E6EDF3] dark:bg-opacity-10"
+        <span class="rounded bg-opacity-10 p-1"
           ><svg
             xmlns="http://www.w3.org/2000/svg"
             width="1em"
