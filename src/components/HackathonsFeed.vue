@@ -5,7 +5,6 @@ export default {
   components: { HackathonCard },
   methods: {
     isMobile() {
-      console.log(screen.width);
       if (screen.width <= 760) {
         return true;
       } else {
