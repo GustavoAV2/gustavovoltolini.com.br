@@ -10,7 +10,7 @@ export default {
   },
   data() {
     return {
-      srcPath: "/src/assets/images/",
+      srcPath: "@/src/assets/images/",
       classPosition: "",
       numberPosition: "",
     };
