@@ -50,9 +50,7 @@ export default {
     class="flex w-full h-full md:flex md:w-auto justify-center align-middle mt-60"
   >
     <div class="flex flex-col align-middle h-full mt-3">
-      <h1
-        class="w-min text-6xl font-bold text-neutral-800 dark:text-neutral-50 md:w-max"
-      >
+      <h1 class="w-min text-6xl font-bold text-neutral-800 md:w-max">
         {{ text }}
       </h1>
 

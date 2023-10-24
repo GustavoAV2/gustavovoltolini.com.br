@@ -3,19 +3,19 @@ export default {
   props: {
     name: String,
     description: String,
-    rawTags: String
+    rawTags: String,
   },
   data() {
     return {
-      tags: []
-    }
+      tags: [],
+    };
   },
   methods: {},
   created() {
-    this.tags = this.rawTags.split(',')
-    console.log(this.tags)
-  }
-}
+    this.tags = this.rawTags.split(",");
+    console.log(this.tags);
+  },
+};
 </script>
 
 <template>
@@ -24,10 +24,11 @@ export default {
     style="
       will-change: transform;
       transition: all 400ms cubic-bezier(0.03, 0.98, 0.52, 0.99) 0s;
-      transform: perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1);
+      transform: perspective(1000px) rotateX(0deg) rotateY(0deg)
+        scale3d(1, 1, 1);
     "
   >
-    <div class="flex h-full flex-col bg-neutral-100 dark:bg-neutral-950">
+    <div class="flex h-full flex-col bg-neutral-100">
       <div class="h-56 w-full">
         <img
           alt="Project image"
@@ -47,7 +48,7 @@ export default {
       <div class="flex flex-1 flex-col p-5">
         <div>
           <div
-            class="mb-10 flex flex-col items-center gap-5 text-2xl dark:text-neutral-50 md:mb-4 md:flex-row"
+            class="mb-10 flex flex-col items-center gap-5 text-2xl md:mb-4 md:flex-row"
           >
             <h2 class="font-bold">{{ name }}</h2>
             <span class="hidden md:inline"
@@ -60,7 +61,9 @@ export default {
                 width="1em"
                 xmlns="http://www.w3.org/2000/svg"
               >
-                <path d="M8 9.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z"></path></svg></span
+                <path
+                  d="M8 9.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z"
+                ></path></svg></span
             ><span class="flex items-center gap-3"
               ><span class="text-xl hover:cursor-pointer"
                 ><svg
@@ -138,7 +141,7 @@ export default {
           <div class="mt-4 hidden flex-wrap items-center gap-2 md:flex">
             <div v-for="projectTag in tags">
               <span
-                class="rounded-xl bg-neutral-700/10 px-2 py-1 text-sm text-neutral-700 dark:bg-neutral-200/10 dark:text-neutral-200"
+                class="rounded-xl bg-neutral-700/10 px-2 py-1 text-sm text-neutral-700"
               >
                 {{ projectTag }}
               </span>
@@ -151,7 +154,7 @@ export default {
             href="https://github.com/mateusfg7/qrcode-generator"
             target="_blank"
             rel="noreferrer"
-            class="flex items-center gap-2 rounded-2xl border border-[#181717] p-4 text-[#181717] hover:bg-[#181717] hover:text-[#F6F8FA] dark:border-[#F6F8FA] dark:text-[#F6F8FA] dark:hover:bg-[#F6F8FA] hover:dark:text-[#181717]"
+            class="flex items-center gap-2 rounded-2xl border border-[#181717] p-4 text-[#181717] hover:bg-[#181717] hover:text-[#F6F8FA]"
             >Repository
             <svg
               stroke="currentColor"
@@ -171,7 +174,7 @@ export default {
             href="https://qrcode.mateusf.com"
             target="_blank"
             rel="noreferrer"
-            class="flex items-center gap-2 rounded-2xl border border-blue-700 bg-blue-700/10 p-4 text-blue-700 hover:bg-blue-700 hover:text-neutral-50 dark:border-blue-600 dark:bg-blue-600/5 dark:text-blue-600 dark:hover:bg-blue-600 dark:hover:text-neutral-50"
+            class="flex items-center gap-2 rounded-2xl border border-blue-700 bg-blue-700/10 p-4 text-blue-700 hover:bg-blue-700 hover:text-neutral-50"
             >Website
             <svg
               stroke="currentColor"
@@ -219,7 +222,11 @@ export default {
           height: 753.055px;
           transform: rotate(-180deg) translate(-50%, -50%);
           opacity: 0;
-          background: linear-gradient(0deg, rgba(255, 255, 255, 0) 0%, rgb(255, 255, 255) 100%);
+          background: linear-gradient(
+            0deg,
+            rgba(255, 255, 255, 0) 0%,
+            rgb(255, 255, 255) 100%
+          );
           transition: opacity 400ms cubic-bezier(0.03, 0.98, 0.52, 0.99) 0s;
         "
       ></div>
