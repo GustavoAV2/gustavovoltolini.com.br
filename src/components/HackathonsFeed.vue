@@ -1,19 +1,19 @@
 <script>
-import HackathonCard from './shared/HackathonCard.vue'
+import HackathonCard from "./shared/HackathonCard.vue";
 
 export default {
   components: { HackathonCard },
   methods: {
     isMobile() {
-      console.log(screen.width)
+      console.log(screen.width);
       if (screen.width <= 760) {
-        return true
+        return true;
       } else {
-        return false
+        return false;
       }
-    }
-  }
-}
+    },
+  },
+};
 </script>
 
 <template>
@@ -27,24 +27,16 @@ export default {
                  exposição a empresas ou contribuir para a comunidade pode acessar o aplicativo por meio de qualquer navegador."
         position="third"
         srcImage="nexus.png"
-        date=""
+        date="05/09/2023"
       ></HackathonCard>
+
       <HackathonCard
         name="HackaConnection Citi"
         projectName="Processador de arquivos CNAB"
         description="Processamento de REMESSA CNAB 750 e criação de cobranças e QRCode"
         position="second"
         srcImage="easyb2b-citi.png"
-        date=""
-      ></HackathonCard>
-      <HackathonCard
-        name="Hackathon São Carlos"
-        projectName="Aplicação faseada de RPA para Simplificação de tarefas"
-        description="Aplicação faseada para simplificar os processos internos da BestCenter, a empresa
-                  patrocinadora do Hackathon."
-        position="first"
-        srcImage="saocarlos.png"
-        date=""
+        date="18/06/2023"
       ></HackathonCard>
 
       <HackathonCard
@@ -53,7 +45,17 @@ export default {
         description="Protótipo de script com Machine Learning"
         position="third"
         srcImage="digio-data&analitycs.png"
-        date=""
+        date="11/11/2022"
+      ></HackathonCard>
+
+      <HackathonCard
+        name="Hackathon São Carlos"
+        projectName="Aplicação faseada de RPA para Simplificação de tarefas"
+        description="Aplicação faseada para simplificar os processos internos da BestCenter, a empresa
+                  patrocinadora do Hackathon."
+        position="first"
+        srcImage="saocarlos.png"
+        date="04/11/2021"
       ></HackathonCard>
     </template>
 
@@ -69,6 +71,7 @@ export default {
           srcImage="nexus.png"
           date="05/09/2023"
         ></HackathonCard>
+
         <HackathonCard
           name="HackaConnection Citi"
           projectName="Processador de arquivos CNAB"

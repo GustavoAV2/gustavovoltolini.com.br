@@ -12,7 +12,13 @@ export default {
       descriptions: ["Backend Developer", "Full Stack Developer"],
     };
   },
-  methods: {},
+  methods: {
+    waitTime(miliseconds) {
+      setTimeout(() => {
+        console.log("Timeout acionado");
+      }, miliseconds);
+    },
+  },
   created() {
     let descIndex = 0;
     let subtext = this.descriptions[descIndex];
@@ -32,11 +38,11 @@ export default {
         descIndex = descIndex == 0 ? 1 : 0;
         subtext = this.descriptions[descIndex];
       }
-    }, 100);
+    }, 180);
 
     setInterval(() => {
       this.caracter = this.caracter.length > 0 ? "" : "|";
-    }, 200);
+    }, 320);
   },
   beforeUnmount() {
     clearInterval();
@@ -50,13 +56,17 @@ export default {
     class="flex w-full h-full md:flex md:w-auto justify-center align-middle mt-60"
   >
     <div class="flex flex-col align-middle h-full mt-3">
-      <h1 class="w-min text-6xl font-bold text-neutral-800 md:w-max">
+      <h1
+        class="w-min text-4xl font-bold text-neutral-800 md:w-max md:text-6xl"
+      >
         {{ text }}
       </h1>
 
-      <div class="flex flex-row ml-1 mt-1">
-        <h2 class="text-4xl text-neutral-400 md:text-4xl">{{ subtext }}</h2>
-        <h2 class="text-4xl text-neutral-400 md:text-4xl">
+      <div class="flex flex-row mt-1">
+        <h2 class="text-2xl ml-1 text-neutral-400 md:text-4xl">
+          {{ subtext }}
+        </h2>
+        <h2 class="text-2xl ml-1 text-neutral-400 md:text-4xl">
           {{ caracter }}
         </h2>
       </div>

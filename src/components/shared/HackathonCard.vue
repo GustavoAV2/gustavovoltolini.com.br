@@ -36,10 +36,9 @@ export default {
 
 <template>
   <div
-    class="overflow-hidden rounded-3xl shadow-2xl shadow-black/30 max-w-lg md:w-32 lg:w-48 m-4"
+    class="overflow-hidden rounded-3xl shadow-2xl shadow-black/30 max-w-lg md:w-96 m-4"
     style="
       will-change: transform;
-      min-width: 512px;
       transition: all 400ms cubic-bezier(0.03, 0.98, 0.52, 0.99) 0s;
       transform: perspective(1000px) rotateX(0deg) rotateY(0deg)
         scale3d(1, 1, 1);
