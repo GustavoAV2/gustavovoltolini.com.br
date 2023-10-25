@@ -21,6 +21,7 @@ export default {
       <HackathonCard
         name="Hackathon Samba Meets Waltz"
         projectName="Nexus"
+        url="sambameets"
         description="Nexus conecta talentos no campo de microeletrônica e semicondutores a empresas em busca de seus talentos,
                  enquanto também oferece uma comunidade ao redor deles. O usuário que procura conhecimento no campo, 
                  exposição a empresas ou contribuir para a comunidade pode acessar o aplicativo por meio de qualquer navegador."
@@ -32,6 +33,7 @@ export default {
       <HackathonCard
         name="HackaConnection Citi"
         projectName="Processador de arquivos CNAB"
+        url="citi"
         description="Processamento de REMESSA CNAB 750 e criação de cobranças e QRCode"
         position="second"
         srcImage="easyb2b-citi.png"
@@ -40,6 +42,7 @@ export default {
 
       <HackathonCard
         name="Hackathon Banco Digio"
+        url="digio"
         projectName="Aplicação faseada de RPA para Simplificação de tarefas"
         description="Protótipo de script com Machine Learning"
         position="third"
@@ -49,6 +52,7 @@ export default {
 
       <HackathonCard
         name="Hackathon São Carlos"
+        url="saocarlos"
         projectName="Aplicação faseada de RPA para Simplificação de tarefas"
         description="Aplicação faseada para simplificar os processos internos da BestCenter, a empresa
                   patrocinadora do Hackathon."
@@ -63,6 +67,7 @@ export default {
         <HackathonCard
           name="Hackathon Samba Meets Waltz"
           projectName="Nexus"
+          url="sambameets"
           description="Nexus conecta talentos no campo de microeletrônica e semicondutores a empresas em busca de seus talentos,
                  enquanto também oferece uma comunidade ao redor deles. O usuário que procura conhecimento no campo, 
                  exposição a empresas ou contribuir para a comunidade pode acessar o aplicativo por meio de qualquer navegador."
@@ -73,6 +78,7 @@ export default {
 
         <HackathonCard
           name="HackaConnection Citi"
+          url="citi"
           projectName="Processador de arquivos CNAB"
           description="Processamento de REMESSA CNAB 750 e criação de cobranças e QRCode"
           position="second"
@@ -84,6 +90,7 @@ export default {
       <div class="flex flex-row">
         <HackathonCard
           name="Hackathon Banco Digio"
+          url="digio"
           projectName="Aplicação faseada de RPA para Simplificação de tarefas"
           description="Protótipo de script com Machine Learning"
           position="third"
@@ -93,6 +100,7 @@ export default {
 
         <HackathonCard
           name="Hackathon São Carlos"
+          url="saocarlos"
           projectName="Aplicação faseada de RPA para Simplificação de tarefas"
           description="Aplicação faseada para simplificar os processos internos da BestCenter, a empresa
                   patrocinadora do Hackathon."
