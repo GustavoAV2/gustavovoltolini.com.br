@@ -15,7 +15,7 @@ export default {
 
 <template>
   <div
-    class="bg-gray-100 antialiased rounded-lg w-auto inline-block md:p-8 md:pt-0"
+    class="bg-gray-100 antialiased rounded-lg w-auto inline-block p-3 pt-0 md:p-8 md:pt-0"
   >
     <link
       rel="stylesheet"
@@ -326,7 +326,7 @@ export default {
         <div class="block-section p-2">
           <!-- Start Education Block -->
           <h2 class="block-title text-xl">Educação</h2>
-          <div class="item-section">
+          <div class="item-section mt-1">
             <div class="w-full space-y-5">
               <div class="space-y-1.5">
                 <div class="font-medium">
@@ -375,9 +375,10 @@ export default {
                   </div>
                 </div>
               </div>
-              <div class="border-b border-gray-200 pt-1 pb-2"></div>
             </div>
           </div>
+          
+          <div class="border-b border-gray-200 mt-2 mb-2"></div>
 
           <div class="item-section">
             <div class="w-full space-y-5">
