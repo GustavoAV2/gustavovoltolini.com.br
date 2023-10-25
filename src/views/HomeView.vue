@@ -46,7 +46,7 @@ export default {
 <template>
   <HeaderComponent></HeaderComponent>
   <div
-    class="flex w-full h-full md:flex md:w-auto justify-center align-middle mt-56"
+    class="flex w-full h-full md:flex md:w-auto justify-center align-middle mt-48"
   >
     <div class="flex flex-col align-middle h-full">
       <h1
