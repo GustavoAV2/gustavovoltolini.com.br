@@ -13,12 +13,12 @@ export default {
 </script>
 
 <template>
-  <div class="block-section flow-root p-2">
+  <div class="block-section flow-root p-2 pb-0">
     <!-- Start Skills Block -->
     <h2 class="block-title text-xl">Habilidades</h2>
 
     <template v-if="!isMobile()">
-      <div class="flex flex-row justify-between pt-2 pb-4">
+      <div class="flex flex-row justify-between pt-2 pb-2">
         <div class="flex flex-col items-center">
           <i class="devicon-git-plain colored text-5xl"></i>
           <span class="skill-tag">Git</span>
@@ -88,7 +88,7 @@ export default {
           </div>
         </div>
 
-        <div class="flex flex-row justify-between">
+        <div class="flex flex-row justify-between pb-2">
           <div class="flex flex-col text-center">
             <i class="devicon-dotnetcore-plain colored text-5xl"></i>
             <span class="skill-tag">.NET</span>
