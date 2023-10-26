@@ -22,6 +22,7 @@ export default {
   },
   created() {
     console.log(this.srcPath);
+    console.log(this.url);
     if (this.position == "first") {
       this.numberPosition = "1º";
       this.classPosition = "first-position";
@@ -98,11 +99,10 @@ export default {
             {{ description }}
           </p>
         </div>
-        
+
         <div class="mt-9 flex flex-1 items-end justify-center gap-6">
           <a
             :href="'/hackathon/' + url"
-            target="_blank"
             class="flex items-center gap-2 rounded-2xl border border-[#181717] p-4 text-[#181717] hover:bg-[#181717] hover:text-[#F6F8FA]"
             >Ver mais
           </a>
