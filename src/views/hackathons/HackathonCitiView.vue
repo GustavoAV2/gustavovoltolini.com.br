@@ -23,7 +23,7 @@ export default {
       <div class="mr-4">
         <div class="w-max mb-2">
           <a
-            href="https://github.com/GustavoAV2/nexus-api"
+            href="https://github.com/GustavoAV2/ApiShipmentIntegration"
             target="_blank"
             rel="noreferrer"
             class="flex items-center gap-2 rounded-2xl p-4 m-0 pt-0 pb-0 border border-[#181717] text-[#181717] hover:bg-[#181717] hover:text-[#F6F8FA]"
@@ -87,23 +87,6 @@ export default {
                   >Joshua Patrick Loesch Alves</a
                 >
               </li>
-              <li class="flex items-center space-x-2">
-                <div
-                  class="w-7 h-7 flex-shrink-0 bg-gray-100 rounded-full overflow-hidden"
-                >
-                  <img
-                    class="object-cover"
-                    src="https://github.com/rafaeldesanta66.png"
-                    alt="Rafael Mendes"
-                  />
-                </div>
-                <a
-                  class="hover:underline"
-                  target="_blank"
-                  href="//github.com/rafaeldesanta66"
-                  >Rafael Mendes de Carvalho</a
-                >
-              </li>
             </ul>
           </dd>
         </dl>
@@ -114,11 +97,12 @@ export default {
           Desafio proposto:
         </dt>
         <p>
-          Empresas austríacas especializadas em microeletrônica e semicondutores
-          buscam talentosos colaboradores brasileiros para integrar suas
-          equipes. Neste desafio hackathon, os participantes precisam criar uma
-          solução tecnológica que auxilie essas empresas austríacas na
-          identificação desses profissionais, aqui no país.
+          Receber arquivo de REMESSA da empresa que solicita geração de QR Code
+          para cobrança, formato CNAB 7502 (Layout Febraban). Transformar cada
+          solicitação de geração de QR Code, recebida no arquivo, em mensagens
+          aceitas pelo formato da pix-api. Após o processamento das solicitações
+          de geração de QR Code, transformar cada resposta no formato
+          correspondente ao arquivo de RETORNO, formato CNAB 750.
         </p>
       </div>
     </div>
@@ -127,32 +111,35 @@ export default {
       class="flex flex-col pt-[0.7rem] md:p-40 md:pt-[0.7rem] text-center text-xl w-full"
     >
       <dt class="opacity-100 font-bold uppercase tracking-widest text-xs mb-1">
-        Nexus (Solução apresentada)
+        Processador de arquivos CNAB (Solução apresentada)
       </dt>
       <p class="text-left">
-        Nexus conecta talentos no campo de microeletrônica e semicondutores a
-        empresas em busca de seus talentos, enquanto também oferece uma
-        comunidade ao redor deles. O usuário que procura conhecimento no campo,
-        exposição a empresas ou contribuir para a comunidade pode acessar o
-        aplicativo por meio de qualquer navegador.
+        <strong>API de cobrança:</strong>
+        Esta é a API principal para o processamento de Remessa e a criação das
+        cobranças e QRCode. A API recebe requisições tanto da Interface FrontEnd
+        pelo usuário, quanto do worker que está monitorando o diretório de
+        arquivos de remessa. A API tem a responsabilidade de interpretar os
+        arquivos, gerar o QRCode de cobrança e criar as respostas
+        correspondentes no formato do arquivo de retorno CNAB 750. Após o
+        processamento, o arquivo de retorno é salvo em um diretório de saída.
       </p>
       <br />
       <p class="text-left">
-        O usuário pode visualizar e criar novos projetos, adicionar novas
-        etiquetas de habilidades, seguir outros usuários, ver seus seguidores e
-        quem eles seguem, além de acessar seus perfis. Os projetos podem ser
-        acessados pela comunidade se forem públicos, seja acessando o perfil de
-        um usuário ou pesquisando por um projeto específico por meio do link
-        "Encontrar Projetos" na barra de aplicativos. A comunidade é fortalecida
-        à medida que os usuários criam projetos.
+        <strong>Monitoramento de diretório de arquivos de remessa</strong>:Este
+        projeto consiste em um script Python que utiliza a biblioteca watchdog
+        para monitorar um diretório específico em busca de novos arquivos de
+        remessa. Quando um novo arquivo é detectado, o arquivo é coletado e
+        enviado para a API De Cobrança onde esse arquivo será processado. Este
+        processador é responsavel por monitorar e encaminhar os arquivos a API,
+        que por sua vez tem a responsabilidade de interpretar os arquivos, gerar
+        o QRCode de cobrança e criar as respostas correspondentes no formato do
+        arquivo de retorno CNAB 750. Após o processamento, o arquivo de retorno
+        é salvo em um diretório de saída.
       </p>
       <br />
       <p class="text-left">
-        Como uma empresa em busca de talentos, elas podem procurar por projetos
-        da comunidade que tenham etiquetas de habilidades ou através da página
-        "Encontrar Talentos". Esta página possibilita a busca por usuários
-        através de etiquetas de habilidades, permitindo às empresas identificar
-        usuários que têm as habilidades que estão procurando.
+        <strong>Interface para o usuário (Frontend):</strong>Repositório
+        Frontend Interface frontend desenvolvida com React
       </p>
     </div>
   </div>

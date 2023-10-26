@@ -14,9 +14,11 @@ export default {
       >
         Pagina não encontrada!
       </h1>
-      <img src="images/404.gif" alt="" style="height: 85px;">
+      <img src="/images/404.gif" alt="" style="height: 85px" />
     </div>
 
-    <a class="pt-5 font-medium hover:text-blue-600 hover:underline" href="/">Voltar a pagina inicial</a>
+    <a class="pt-5 font-medium hover:text-blue-600 hover:underline" href="/"
+      >Voltar a pagina inicial</a
+    >
   </div>
 </template>
