@@ -15,7 +15,7 @@ export default {
 
 <template>
   <div
-    class="bg-gray-100 antialiased rounded-lg w-auto inline-block p-3 pt-0 md:p-8 md:pt-0"
+    class="p-3 pt-0 bg-gray-100 antialiased rounded-lg w-full md:w-3/5 md:p-8 md:pt-0 md:mb-8"
   >
     <link
       rel="stylesheet"
@@ -377,7 +377,7 @@ export default {
               </div>
             </div>
           </div>
-          
+
           <div class="border-b border-gray-200 mt-2 mb-2"></div>
 
           <div class="item-section">
