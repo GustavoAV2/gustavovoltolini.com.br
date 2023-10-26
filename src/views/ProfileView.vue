@@ -8,9 +8,7 @@ export default {
 
 <template>
   <HeaderComponent></HeaderComponent>
-  <div
-    class="flex-col justify-center w-auto inline-block p-1 pb-4 md:pr-96 md:pl-96"
-  >
+  <div class="flex justify-center">
     <Profile></Profile>
   </div>
 </template>
