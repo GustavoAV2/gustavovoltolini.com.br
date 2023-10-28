@@ -2,48 +2,48 @@
 export default {
   methods: {
     isMobile() {
-      return screen.width <= 760
-    }
+      return screen.width <= 760;
+    },
   },
   data() {
     return {
       skillsList: [
         {
           skillName: "Git",
-          skillIcon: "devicon-git-plain"
+          skillIcon: "devicon-git-plain",
         },
         {
           skillName: "C#",
-          skillIcon: "devicon-csharp-plain"
+          skillIcon: "devicon-csharp-plain",
         },
         {
           skillName: "Python",
-          skillIcon: "devicon-python-plain"
+          skillIcon: "devicon-python-plain",
         },
         {
           skillName: "Flask",
-          skillIcon: "devicon-flask-original"
+          skillIcon: "devicon-flask-original",
         },
         {
           skillName: ".NET",
-          skillIcon: "devicon-dotnetcore-plain"
+          skillIcon: "devicon-dotnetcore-plain",
         },
         {
           skillName: "Vue",
-          skillIcon: "devicon-vuejs-plain"
+          skillIcon: "devicon-vuejs-plain",
         },
         {
           skillName: "SQL",
-          skillIcon: "devicon-mysql-plain"
+          skillIcon: "devicon-mysql-plain",
         },
         {
           skillName: "HTML/CSS",
-          skillIcon: "devicon-html5-plain"
-        }
-      ]
+          skillIcon: "devicon-html5-plain",
+        },
+      ],
     };
   },
-}
+};
 </script>
 
 <template>
@@ -51,8 +51,12 @@ export default {
     <!-- Start Skills Block -->
     <h2 class="block-title text-xl">Habilidades</h2>
     <template v-if="!isMobile()">
-      <div class="flex flex-row justify-between pt-2 pb-2">
-        <div v-for="skill in skillsList" :key="skill.skillName" class="flex flex-col items-center">
+      <div class="flex flex-row flex-wrap justify-between pt-2 pb-2">
+        <div
+          v-for="skill in skillsList"
+          :key="skill.skillName"
+          class="flex flex-col items-center"
+        >
           <i :class="`${skill.skillIcon} colored text-5xl`"></i>
           <span class="skill-tag">{{ skill.skillName }}</span>
         </div>

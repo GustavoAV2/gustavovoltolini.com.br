@@ -19,10 +19,11 @@ export default {
     srcPath() {
       return "/images/" + this.srcImage;
     },
+    formattedDescription() {
+      return this.description.substring(0, 70) + "...";
+    },
   },
   created() {
-    console.log(this.srcPath);
-    console.log(this.url);
     if (this.position == "first") {
       this.numberPosition = "1º";
       this.classPosition = "first-position";
@@ -49,7 +50,7 @@ export default {
         scale3d(1, 1, 1);
     "
   >
-    <div class="flex h-full flex-col bg-neutral-100">
+    <div class="flex h-full flex-col bg-neutral-100" style="min-height: 554px">
       <div class="h-56 w-full">
         <img
           alt="Project image"
@@ -96,7 +97,7 @@ export default {
             </strong>
           </p>
           <p class="text-justify md:text-left">
-            {{ description }}
+            {{ formattedDescription }}
           </p>
         </div>
 
