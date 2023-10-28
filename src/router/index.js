@@ -1,7 +1,6 @@
 import { createRouter, createWebHistory } from "vue-router";
 import HomeView from "../views/HomeView.vue";
 import AboutView from "../views/AboutView.vue";
-import ProjectView from "../views/ProjectView.vue";
 import ProfileView from "../views/ProfileView.vue";
 import HackathonsView from "../views/HackathonView.vue";
 import HackathonSambaMeetsView from "../views/hackathons/HackathonSambaMeetsView.vue";
@@ -22,11 +21,6 @@ const router = createRouter({
       path: "/profile",
       name: "profile",
       component: ProfileView,
-    },
-    {
-      path: "/projects",
-      name: "projects",
-      component: ProjectView,
     },
     {
       path: "/hackathons",
