@@ -130,7 +130,10 @@ export default {
         correspondentes no formato do arquivo de retorno CNAB 750. Após o
         processamento, o arquivo de retorno é salvo em um diretório de saída.
       </p>
-      <img src="/images/Citi/Fluxograma-Api.jpg" alt="" />
+
+      <div class="flex justify-center">
+        <img src="/images/Citi/Fluxograma-Api.jpg" alt="" class="md:w-2/5" />
+      </div>
 
       <br />
       <p class="text-left">
@@ -145,7 +148,14 @@ export default {
         arquivo de retorno CNAB 750. Após o processamento, o arquivo de retorno
         é salvo em um diretório de saída.
       </p>
-      <img src="/images/Citi/Fluxograma-Process.jpg" alt="" />
+
+      <div class="flex justify-center">
+        <img
+          src="/images/Citi/Fluxograma-Process.jpg"
+          alt=""
+          class="md:w-2/5"
+        />
+      </div>
 
       <br />
       <p class="text-left">
