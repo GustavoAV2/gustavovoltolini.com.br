@@ -13,7 +13,7 @@ export default {
       <h1
         class="text-2xl md:text-4xl lg:text-4xl font-bold leading-tight md:leading-[1em] mb-10"
       >
-        Hackathon Samba Meets Waltz
+        HackaConnection Citi
       </h1>
     </div>
 
@@ -113,6 +113,13 @@ export default {
       <dt class="opacity-100 font-bold uppercase tracking-widest text-xs mb-1">
         Processador de arquivos CNAB (Solução apresentada)
       </dt>
+      <div class="flex justify-center">
+        <img
+          src="/images/Citi/SitiSolution-Arquitetura.jpg"
+          alt=""
+          class="md:w-2/5"
+        />
+      </div>
       <p class="text-left">
         <strong>API de cobrança:</strong>
         Esta é a API principal para o processamento de Remessa e a criação das
@@ -123,6 +130,8 @@ export default {
         correspondentes no formato do arquivo de retorno CNAB 750. Após o
         processamento, o arquivo de retorno é salvo em um diretório de saída.
       </p>
+      <img src="/images/Fluxograma-Api.jpg" alt="" />
+
       <br />
       <p class="text-left">
         <strong>Monitoramento de diretório de arquivos de remessa</strong>:Este
@@ -136,6 +145,8 @@ export default {
         arquivo de retorno CNAB 750. Após o processamento, o arquivo de retorno
         é salvo em um diretório de saída.
       </p>
+      <img src="/images/Fluxograma-Process.jpg" alt="" />
+
       <br />
       <p class="text-left">
         <strong>Interface para o usuário (Frontend):</strong>Repositório

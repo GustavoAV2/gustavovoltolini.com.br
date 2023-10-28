@@ -9,7 +9,7 @@ export default {
       Está pagina está em desenvolvimento, obrigado pelo interesse.
     </h1>
 
-    <img src="/images/InDevelopment2.gif" alt="" class="w-56" />
+    <img src="/images/InDevelopment3.gif" alt="" class="w-56" />
 
     <a
       class="pt-5 font-medium hover:text-blue-600 hover:underline"

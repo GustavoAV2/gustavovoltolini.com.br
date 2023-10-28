@@ -110,7 +110,9 @@ export default {
       </div>
 
       <div class="pb-8 leading-relaxed text-2xl pt-[0.7rem]">
-        <dt class="opacity-100 font-bold uppercase tracking-widest text-xs">
+        <dt
+          class="opacity-100 font-bold uppercase tracking-widest text-xs md:text-lg"
+        >
           Desafio proposto:
         </dt>
         <p>
@@ -126,7 +128,9 @@ export default {
     <div
       class="flex flex-col pt-[0.7rem] md:p-40 md:pt-[0.7rem] text-center text-xl w-full"
     >
-      <dt class="opacity-100 font-bold uppercase tracking-widest text-xs mb-1">
+      <dt
+        class="opacity-100 font-bold uppercase tracking-widest text-sm md:text-lg mb-1"
+      >
         Nexus (Solução apresentada)
       </dt>
       <p class="text-left">
@@ -154,6 +158,85 @@ export default {
         através de etiquetas de habilidades, permitindo às empresas identificar
         usuários que têm as habilidades que estão procurando.
       </p>
+
+      <div class="flex items-center justify-center">
+        <img
+          src="/images/SambaMeets/NexusMap.jpg"
+          alt=""
+          class="md:w-11/12 mt-2"
+          width="100%"
+        />
+      </div>
+      <br />
+
+      <dt
+        class="opacity-100 font-bold uppercase tracking-widest text-xs mb-1 text-left"
+      >
+        API Nexus:
+      </dt>
+      <p class="text-left">
+        API desenvolvida em C# ASP .NET Core 7, que alimenta e consome o banco
+        de dados SQL.
+      </p>
+      <br />
+
+      <dt
+        class="opacity-100 font-bold uppercase tracking-widest text-xs mb-1 text-left"
+      >
+        Interface para o usuário (Frontend):
+      </dt>
+      <p class="text-left">
+        Interface frontend desenvolvida com React e Tailwind.
+      </p>
+
+      <div class="flex flex-col items-center justify-center">
+        <dt
+          class="opacity-100 font-bold uppercase tracking-widest text-xs mt-1 mb-1 text-left"
+        >
+          Perfil:
+        </dt>
+
+        <img
+          src="/images/SambaMeets/2Profile.png"
+          alt="Perfil"
+          class="md:md:w-11/12"
+        />
+
+        <dt
+          class="opacity-100 font-bold uppercase tracking-widest text-xs mt-1 mb-1 text-left"
+        >
+          Habilidades:
+        </dt>
+
+        <img
+          src="/images/SambaMeets/7FindProject.png"
+          alt="Buscar projetos"
+          class="md:md:w-11/12"
+        />
+
+        <dt
+          class="opacity-100 font-bold uppercase tracking-widest text-xs mt-1 mb-1 text-left"
+        >
+          Projetos:
+        </dt>
+        <img
+          src="/images/SambaMeets/8FindTalent.png"
+          alt="Buscar talentos"
+          class="md:md:w-11/12"
+        />
+
+        <dt
+          class="opacity-100 font-bold uppercase tracking-widest text-xs mt-1 mb-1 text-left"
+        >
+          Talentos:
+        </dt>
+
+        <img
+          src="/images/SambaMeets/9FindTalent.png"
+          alt="Buscar talentos"
+          class="md:md:w-11/12"
+        />
+      </div>
     </div>
   </div>
 </template>
