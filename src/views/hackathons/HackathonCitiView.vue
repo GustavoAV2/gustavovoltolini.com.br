@@ -30,16 +30,10 @@ export default {
       :repoUrl="repoUrl"
       :team="JSON.stringify(this.teamMembers)"
       :challenge="challenge"
+      youtubeUrl="Ch7t2-1auOA"
       position="2"
       date="18/06/2023"
     />
-
-    <iframe
-      width="100%"
-      height="445"
-      src="https://www.youtube.com/embed/Ch7t2-1auOA"
-    >
-    </iframe>
 
     <div
       class="flex flex-col pt-[0.7rem] md:p-40 md:pt-[0.7rem] text-center text-xl w-full"

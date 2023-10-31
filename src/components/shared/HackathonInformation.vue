@@ -3,6 +3,7 @@ export default {
   props: {
     name: String,
     repoUrl: String,
+    youtubeUrl: String,
     challenge: String,
     position: String,
     date: String,
@@ -11,7 +12,7 @@ export default {
   data() {
     return {
       members: [],
-      classPosition: ""
+      classPosition: "",
     };
   },
   created() {
@@ -40,7 +41,8 @@ export default {
       <h1
         class="opacity-100 font-bold uppercase tracking-widest text-xs pt-[0.7rem]"
       >
-        Colocação: <position :class="classPosition">{{ position }}º Lugar</position>
+        Colocação:
+        <position :class="classPosition">{{ position }}º Lugar</position>
       </h1>
 
       <h1
@@ -54,6 +56,18 @@ export default {
       class="flex flex-col md:flex-row md:pt-[0.7rem] md:p-40 md:pb-[0.7rem]"
     >
       <div class="mr-4">
+        <div class="w-max pt-[0.7rem]">
+          <a
+            :href="'https://www.youtube.com/watch?v=' + youtubeUrl"
+            target="_blank"
+            rel="noreferrer"
+            class="flex items-center gap-2 rounded-2xl p-4 m-0 pt-0 pb-0 border border-[#181717] text-[#181717] hover:bg-[#181717] hover:text-[#F6F8FA]"
+          >
+            Video apresentação
+            <img src="/images/youtube.svg" height="16" width="16" alt="" />
+          </a>
+        </div>
+
         <div class="w-max pt-[0.7rem]">
           <a
             :href="'' + repoUrl"
