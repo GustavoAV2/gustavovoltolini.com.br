@@ -86,7 +86,7 @@ export default {
                 <path d="M8 9.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z"></path>
               </svg>
             </span>
-            <span class="flex items-center gap-3">
+            <span class="flex items-center gap-3 text-xl">
               <span :class="classPosition">{{ numberPosition }} Lugar</span>
             </span>
           </div>
