@@ -31,7 +31,7 @@ export default {
           <!-- Start User Block -->
           <div class="relative text-center">
             <div class="pt-5 pb-2">
-              <div class="text-3xl font-semibold mb-1.5">Gustavo Voltolini</div>
+              <div class="text-3xl font-semibold mb-1.5">Gustavo Antunes Voltolini</div>
               <div class="text-sm text-gray-400 mb-4">Backend Developer</div>
               <div class="flex group justify-center items-center">
                 <button class="download-btn" @click="downloadCV()">
