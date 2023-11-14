@@ -9,12 +9,6 @@ export default {
     srcImage: String,
     date: String,
   },
-  data() {
-    return {
-      classPosition: "",
-      numberPosition: "",
-    };
-  },
   computed: {
     srcPath() {
       return "/images/" + this.srcImage;
@@ -22,20 +16,20 @@ export default {
     formattedDescription() {
       return this.description.substring(0, 70) + "...";
     },
-  },
-  created() {
-    if (this.position == "first") {
-      this.numberPosition = "1º";
-      this.classPosition = "first-position";
-    } else if (this.position == "second") {
-      this.numberPosition = "2º";
-      this.classPosition = "second-position";
-    } else if (this.position == "third") {
-      this.numberPosition = "3º";
-      this.classPosition = "third-position";
-    } else {
-      this.numberPosition = "Não posicionado";
-    }
+    positionFormatted() {
+      return this.position != "NA"
+        ? this.position + "º Lugar"
+        : "Não classificado";
+    },
+    classPosition() {
+      if (this.position == "1") {
+        return "first-position";
+      } else if (this.position == "2") {
+        return "second-position";
+      } else if (this.position == "3") {
+        return "third-position";
+      }
+    },
   },
 };
 </script>
@@ -87,7 +81,7 @@ export default {
               </svg>
             </span>
             <span class="flex items-center gap-3 text-xl">
-              <span :class="classPosition">{{ numberPosition }} Lugar</span>
+              <span :class="classPosition">{{ positionFormatted }}</span>
             </span>
           </div>
 
