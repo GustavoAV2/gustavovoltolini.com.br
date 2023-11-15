@@ -108,12 +108,12 @@ export default {
     Filtrar por:
     <a
       @click="filterByDate"
-      class="no-underline checked:underline hover:underline text-cyan-600 dark:text-cyan-400 cursor-pointer ml-2"
+      class="focus:underline hover:underline text-cyan-600 cursor-pointer ml-2"
       >Data</a
     >
     <a
       @click="filterByRank"
-      class="no-underline checked:underline hover:underline text-cyan-600 dark:text-cyan-400 cursor-pointer ml-2"
+      class="checked:underline hover:underline text-cyan-600 cursor-pointer ml-2"
       >Colocação</a
     >
   </div>

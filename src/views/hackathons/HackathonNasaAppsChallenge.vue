@@ -61,7 +61,7 @@ export default {
         </li>
       </ul>
       <div class="flex justify-center">
-        <img src="/images/NasaAppsChallenge/feed.png" alt="" class="md:w-2/5" />
+        <img src="/images/NasaAppsChallenge/feed.png" alt="" class="md:w-4/5" />
       </div>
       <ul>
         <li>
@@ -75,7 +75,7 @@ export default {
         <img
           src="/images/NasaAppsChallenge/interests.png"
           alt=""
-          class="md:w-2/5"
+          class="md:w-4/5"
         />
       </div>
     </div>
