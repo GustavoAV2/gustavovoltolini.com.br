@@ -8,9 +8,16 @@ export default {
   components: { HeaderComponent, Skills, Experience, Education },
   methods: {
     downloadCV() {
-      alert(
-        "O download ainda não está disponivel, obrigado pelo interesse! ;)"
-      );
+      let name = "GustavoVoltolini.pdf";
+      let uri = "/docs/GustavoVoltolini.pdf";
+      var link = document.createElement("a");
+      // If you don't know the name or want to use
+      // the webserver default set name = ''
+      link.setAttribute("download", name);
+      link.href = uri;
+      document.body.appendChild(link);
+      link.click();
+      link.remove();
     },
   },
 };
@@ -31,12 +38,15 @@ export default {
           <!-- Start User Block -->
           <div class="relative text-center">
             <div class="pt-5 pb-2">
-              <div class="text-3xl font-semibold mb-1.5">Gustavo Antunes Voltolini</div>
+              <div class="text-3xl font-semibold mb-1.5">
+                Gustavo Antunes Voltolini
+              </div>
               <div class="text-sm text-gray-400 mb-4">Backend Developer</div>
               <div class="flex group justify-center items-center">
-                <button class="download-btn" @click="downloadCV()">
+                <button class="download-btn" @click="downloadCV()" tar>
                   Download CV
                 </button>
+
                 <button class="download-btn-icon" @click="downloadCV()">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
