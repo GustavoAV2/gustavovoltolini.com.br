@@ -41,7 +41,9 @@ export default {
     <div
       class="flex flex-col pt-[0.7rem] md:p-40 md:pt-[0.7rem] text-center text-xl w-full"
     >
-      <dt class="opacity-100 font-bold uppercase tracking-widest text-xs mb-1">
+      <dt
+        class="opacity-100 font-bold uppercase tracking-widest text-xs md:text-lg mb-1"
+      >
         Open Source Discovery (Solução apresentada)
       </dt>
 
@@ -52,7 +54,7 @@ export default {
       </p>
 
       <strong>Funcionalidades Principais</strong>
-      <ul>
+      <ul class="text-left">
         <li>
           Exploração, Filtragem e Pesquisa de Projetos Sociais: Nossos usuários
           podem facilmente explorar, filtrar e buscar projetos sociais,
@@ -60,10 +62,10 @@ export default {
           interesses.
         </li>
       </ul>
-      <div class="flex justify-center">
+      <div class="flex justify-center mt-1 mb-1">
         <img src="/images/NasaAppsChallenge/feed.png" alt="" class="md:w-4/5" />
       </div>
-      <ul>
+      <ul class="text-left">
         <li>
           Cadastro de Colaboradores [Em desenvolvimento]: Os colaboradores podem
           criar perfis pessoais, onde e possivel listar suas habilidades e
@@ -71,7 +73,7 @@ export default {
           as preferências de cada colaborador.
         </li>
       </ul>
-      <div class="flex justify-center">
+      <div class="flex justify-center mt-1 mb-1">
         <img
           src="/images/NasaAppsChallenge/interests.png"
           alt=""
