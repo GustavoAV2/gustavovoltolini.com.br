@@ -13,6 +13,7 @@ export default {
     return {
       members: [],
       classPosition: "",
+      isPositioned: true,
     };
   },
   created() {
@@ -24,7 +25,7 @@ export default {
     } else if (this.position == "3") {
       this.classPosition = "third-position";
     } else {
-      this.numberPosition = "Não posicionado";
+      this.isPositioned = false;
     }
   },
 };
@@ -38,12 +39,23 @@ export default {
       >
         {{ name }}
       </h1>
-      <h1
-        class="opacity-100 font-bold uppercase tracking-widest text-xs pt-[0.7rem]"
-      >
-        Colocação:
-        <position :class="classPosition">{{ position }}º Lugar</position>
-      </h1>
+      <template v-if="isPositioned">
+        <h1
+          class="opacity-100 font-bold uppercase tracking-widest text-xs pt-[0.7rem]"
+        >
+          Colocação:
+          <position :class="classPosition">{{ position }}º Lugar</position>
+        </h1>
+      </template>
+
+      <template v-else>
+        <h1
+          class="opacity-100 font-bold uppercase tracking-widest text-xs pt-[0.7rem]"
+        >
+          Colocação:
+          <position>Não posicionado</position>
+        </h1>
+      </template>
 
       <h1
         class="opacity-100 font-bold uppercase tracking-widest text-xs pt-[0.7rem]"
