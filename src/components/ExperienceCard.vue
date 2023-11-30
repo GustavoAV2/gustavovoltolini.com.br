@@ -24,6 +24,7 @@ export default {
               :src="'/images/' + imgUrl"
               alt=""
               class="rounded-full"
+              style="max-width: 44px; max-height: 44px;"
             />
             <span>{{ company }}</span>
           </div>
