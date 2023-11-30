@@ -21,7 +21,7 @@ export default {
         <div class="flex flex-col items-center align-middle">
           <div>
             <img
-              :src="'../assets/images/empresas/' + imgUrl"
+              :src="'/images/' + imgUrl"
               alt=""
               class="rounded-full"
             />
