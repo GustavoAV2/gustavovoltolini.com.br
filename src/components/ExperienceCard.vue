@@ -8,7 +8,7 @@ export default {
     startDate: String,
     finalDate: String,
     text: Array,
-  },
+  }
 };
 </script>
 
@@ -21,7 +21,7 @@ export default {
         <div class="flex flex-col items-center align-middle">
           <div>
             <img
-              :src="imgUrl"
+              :src="'../assets/images/empresas/' + imgUrl"
               alt=""
               class="rounded-full"
             />

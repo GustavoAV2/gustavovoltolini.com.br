@@ -123,7 +123,7 @@ export default {
             <Experience
               position="Desenvolvedor Pleno"
               company="Ambev Tech"
-              imgUrl="../assets/images/empresas/dwlAmbev.jpeg"
+              imgUrl="dwlAmbev.jpeg"
               period="Tempo integral"
               startDate="Julho 2022"
               finalDate="O momento"
@@ -146,7 +146,7 @@ export default {
             <Experience
               position="Desenvolvedor Junior (Nível II)"
               company="Ambev Tech"
-              imgUrl="../assets/images/empresas/dwlAmbev.jpeg"
+              imgUrl="dwlAmbev.jpeg"
               period="Tempo integral"
               startDate="Outubro 2021"
               finalDate="Julho 2022"
@@ -168,7 +168,7 @@ export default {
             <Experience
               position="Desenvolvedor Junior (Nível I)"
               company="Ambev Tech"
-              imgUrl="../assets/images/empresas/dwlAmbev.jpeg"
+              imgUrl="dwlAmbev.jpeg"
               period="Tempo integral"
               startDate="Novembro 2020"
               finalDate="Outubro 2021"
@@ -188,7 +188,7 @@ export default {
             <Experience
               position="Estágio Desenvolvedor"
               company="HBSIS Soluções em TI Ltda"
-              imgUrl="../assets/images/empresas/hbsis.jpeg"
+              imgUrl="hbsis.jpeg"
               period="Meio periodo"
               startDate="Novembro 2019"
               finalDate="Outubro 2020"
