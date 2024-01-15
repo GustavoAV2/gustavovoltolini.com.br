@@ -63,7 +63,7 @@ export default {
         </li>
       </ul>
       <div class="flex justify-center mt-1 mb-1">
-        <img src="/images/NasaAppsChallenge/feed.png" alt="" class="md:w-4/5" />
+        <img src="/images/NasaAppsChallenge/feed.png" alt="" class="md:w-4/5 shadow-md" />
       </div>
       <ul class="text-left">
         <li>
@@ -77,8 +77,15 @@ export default {
         <img
           src="/images/NasaAppsChallenge/interests.png"
           alt=""
-          class="md:w-4/5"
+          class="md:w-4/5 shadow-md"
         />
+      </div>
+
+      <div id="media" class="pt-[3rem]">
+        <h2 class="opacity-100 font-bold uppercase tracking-widest text-sm md:text-lg mb-1">
+          Mídias do dia do evento 
+        </h2>
+        <span>Este projeto não contem mídia</span>
       </div>
     </div>
   </div>

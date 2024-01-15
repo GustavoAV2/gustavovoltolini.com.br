@@ -1,6 +1,7 @@
 <script>
 import HeaderComponent from "../../components/shared/Header.vue";
 import HackathonInformation from "../../components/shared/HackathonInformation.vue";
+import Carrousel from "../../components/shared/Carrousel.vue"
 
 export default {
   data() {
@@ -17,7 +18,7 @@ export default {
         "Receber arquivo de REMESSA da empresa que solicita geração de QR Code para cobrança, formato CNAB 7502 (Layout Febraban). Transformar cada solicitação de geração de QR Code, recebida no arquivo, em mensagens aceitas pelo formato da pix-api. Após o processamento das solicitações de geração de QR Code, transformar cada resposta no formato correspondente ao arquivo de RETORNO, formato CNAB 750.",
     };
   },
-  components: { HeaderComponent, HackathonInformation },
+  components: { HeaderComponent, HackathonInformation, Carrousel },
 };
 </script>
 
@@ -36,16 +37,16 @@ export default {
     />
 
     <div
-      class="flex flex-col pt-[0.7rem] md:p-40 md:pt-[0.7rem] text-center text-xl w-full"
+      class="flex flex-col pt-[0.7rem] md:p-40 pb-3 md:pt-[0.7rem] text-center text-xl w-full"
     >
-      <dt class="opacity-100 font-bold uppercase tracking-widest text-xs mb-1">
+      <dt class="opacity-100 font-bold uppercase tracking-widest text-sm md:text-lg mb-1">
         Processador de arquivos CNAB (Solução apresentada)
       </dt>
       <div class="flex justify-center">
         <img
           src="/images/Citi/SitiSolution-Arquitetura.jpg"
           alt=""
-          class="md:w-2/5"
+          class="md:w-2/5 shadow-md"
         />
       </div>
       <p class="text-left">
@@ -60,7 +61,7 @@ export default {
       </p>
 
       <div class="flex justify-center">
-        <img src="/images/Citi/Fluxograma-Api.jpg" alt="" class="md:w-2/5" />
+        <img src="/images/Citi/Fluxograma-Api.jpg" alt="" class="md:w-2/5 shadow-md" />
       </div>
 
       <br />
@@ -81,7 +82,7 @@ export default {
         <img
           src="/images/Citi/Fluxograma-Process.jpg"
           alt=""
-          class="md:w-2/5"
+          class="md:w-2/5 shadow-md"
         />
       </div>
 
@@ -90,6 +91,16 @@ export default {
         <strong>Interface para o usuário (Frontend):</strong>Repositório
         Frontend Interface frontend desenvolvida com React
       </p>
+      
+      <div id="media" class="pt-[2rem]">
+        <h2 class="opacity-100 font-bold uppercase tracking-widest text-sm md:text-lg mb-1">
+          Mídias do dia do evento 
+        </h2>
+        <Carrousel 
+        prefix="Citi/Memories/"
+        images="Citi-1.JPEG;Citi-2.JPEG"
+        />
+      </div>
     </div>
-  </div>
+    </div>
 </template>
