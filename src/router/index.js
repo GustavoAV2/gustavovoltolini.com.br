@@ -7,6 +7,7 @@ import HackathonSambaMeetsView from "../views/hackathons/HackathonSambaMeetsView
 import HackathonDigioView from "../views/hackathons/HackathonDigioView.vue";
 import HackathonCitiView from "../views/hackathons/HackathonCitiView.vue";
 import HackathonSaoCarlosView from "../views/hackathons/HackathonSaoCarlosView.vue";
+import HackathonNasaAppsChallenge from "../views/hackathons/HackathonNasaAppsChallenge.vue";
 import PageNotFoundView from "../views/PageNotFoundView.vue";
 
 const router = createRouter({
@@ -46,6 +47,11 @@ const router = createRouter({
       path: "/hackathon/saocarlos",
       name: "hackathon-saocarlos",
       component: HackathonSaoCarlosView,
+    },
+    {
+      path: "/hackathon/nasachallenges",
+      name: "nasachallenges",
+      component: HackathonNasaAppsChallenge,
     },
     {
       path: "/about",

@@ -13,6 +13,7 @@ export default {
     return {
       members: [],
       classPosition: "",
+      isPositioned: true,
     };
   },
   created() {
@@ -24,7 +25,7 @@ export default {
     } else if (this.position == "3") {
       this.classPosition = "third-position";
     } else {
-      this.numberPosition = "Não posicionado";
+      this.isPositioned = false;
     }
   },
 };
@@ -38,12 +39,23 @@ export default {
       >
         {{ name }}
       </h1>
-      <h1
-        class="opacity-100 font-bold uppercase tracking-widest text-xs pt-[0.7rem]"
-      >
-        Colocação:
-        <position :class="classPosition">{{ position }}º Lugar</position>
-      </h1>
+      <template v-if="isPositioned">
+        <h1
+          class="opacity-100 font-bold uppercase tracking-widest text-xs pt-[0.7rem]"
+        >
+          Colocação:
+          <position :class="classPosition">{{ position }}º Lugar</position>
+        </h1>
+      </template>
+
+      <template v-else>
+        <h1
+          class="opacity-100 font-bold uppercase tracking-widest text-xs pt-[0.7rem]"
+        >
+          Colocação:
+          <position>Não posicionado</position>
+        </h1>
+      </template>
 
       <h1
         class="opacity-100 font-bold uppercase tracking-widest text-xs pt-[0.7rem]"
@@ -56,6 +68,43 @@ export default {
       class="flex flex-col md:flex-row md:pt-[0.7rem] md:p-40 md:pb-[0.7rem]"
     >
       <div class="mr-4">
+        <dl class="col-span-6 lg:col-span-4 pt-[0.7rem] w-max">
+          <dt class="opacity-100 font-bold uppercase tracking-widest text-xs md:text-lg">
+            Integrantes do projeto
+          </dt>
+          <dd class="text-xl">
+            <ul class="my-2 space-y-4">
+              <li class="flex items-center space-x-2" v-for="member in members">
+                <div
+                  class="w-7 h-7 flex-shrink-0 bg-gray-100 rounded-full overflow-hidden"
+                >
+                  <img
+                    class="object-cover"
+                    :src="'https://github.com/' + member.user + '.png'"
+                    :alt="'' + member.name"
+                  />
+                </div>
+                <a
+                  class="hover:underline"
+                  target="_blank"
+                  :href="'//github.com/' + member.user"
+                  >{{ member.name }}</a
+                >
+              </li>
+            </ul>
+          </dd>
+        </dl>
+
+        <div class="w-max pt-[0.7rem]">
+          <a
+            href="#media"
+            class="flex items-center gap-2 rounded-2xl p-4 m-0 pt-0 pb-0 border border-[#181717] text-[#181717] hover:bg-[#181717] hover:text-[#F6F8FA]"
+          >
+            Mídias do evento
+            <img src="/images/camera.svg" height="16" width="16" alt="" />
+          </a>
+        </div>
+
         <div class="w-max pt-[0.7rem]">
           <a
             :href="'https://www.youtube.com/watch?v=' + youtubeUrl"
@@ -93,40 +142,13 @@ export default {
             </svg>
           </a>
         </div>
-
-        <dl class="col-span-6 lg:col-span-4 pt-[0.7rem] w-max">
-          <dt class="opacity-100 font-bold uppercase tracking-widest text-xs">
-            Quem participou deste projeto?
-          </dt>
-          <dd class="text-xl">
-            <ul class="my-2 space-y-4">
-              <li class="flex items-center space-x-2" v-for="member in members">
-                <div
-                  class="w-7 h-7 flex-shrink-0 bg-gray-100 rounded-full overflow-hidden"
-                >
-                  <img
-                    class="object-cover"
-                    :src="'https://github.com/' + member.user + '.png'"
-                    :alt="'' + member.name"
-                  />
-                </div>
-                <a
-                  class="hover:underline"
-                  target="_blank"
-                  :href="'//github.com/' + member.user"
-                  >{{ member.name }}</a
-                >
-              </li>
-            </ul>
-          </dd>
-        </dl>
       </div>
 
       <div class="pb-8 leading-relaxed text-2xl pt-[0.7rem]">
         <dt
-          class="opacity-100 font-bold uppercase tracking-widest text-xs md:text-lg"
+          class="opacity-100 font-bold uppercase tracking-widest text-xs md:text-lg text-center"
         >
-          Desafio proposto:
+          Desafio proposto
         </dt>
         <p>
           {{ challenge }}

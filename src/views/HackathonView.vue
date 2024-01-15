@@ -13,7 +13,7 @@ export default {
           url: "sambameets",
           description:
             "Nexus conecta talentos no campo de microeletrônica e semicondutores a empresas em busca de seus talentos, enquanto também oferece uma comunidade ao redor deles. O usuário que procura conhecimento no campo, exposição a empresas ou contribuir para a comunidade pode acessar o aplicativo por meio de qualquer navegador.",
-          position: "third",
+          position: "3",
           srcImage: "nexus.png",
           date: "05/09/2023",
         },
@@ -23,7 +23,7 @@ export default {
           url: "citi",
           description:
             "Processamento de REMESSA CNAB 750 e criação de cobranças e QRCode",
-          position: "second",
+          position: "2",
           srcImage: "easyb2b-citi.png",
           date: "18/06/2023",
         },
@@ -32,7 +32,7 @@ export default {
           url: "digio",
           projectName: "Aplicação faseada de RPA para Simplificação de tarefas",
           description: "Protótipo de script com Machine Learning",
-          position: "third",
+          position: "3",
           srcImage: "digio-data&analitycs.png",
           date: "11/11/2022",
         },
@@ -42,9 +42,19 @@ export default {
           projectName: "Aplicação faseada de RPA para Simplificação de tarefas",
           description:
             "Aplicação faseada para simplificar os processos internos da BestCenter, a empresa patrocinadora do Hackathon.",
-          position: "first",
+          position: "1",
           srcImage: "saocarlos.png",
           date: "04/11/2021",
+        },
+        {
+          name: "Nasa Apps Challenges",
+          projectName: "Open Science Discovery",
+          url: "nasachallenges",
+          description:
+            "Este projeto visa criar uma plataforma online que conecta instituições públicas e seus projetos sociais com colaboradores em potencial.",
+          position: "NA",
+          srcImage: "nasachallenge.png",
+          date: "09/10/2023",
         },
       ],
     };
@@ -54,37 +64,38 @@ export default {
       const dateA = this.parseDate(firstHacka.date);
       const dateB = this.parseDate(secondHacka.date);
 
-      return dateB < dateA;
+      if (dateA > dateB) return -1;
+      if (dateA < dateB) return 1;
+      return 0;
     },
     parseDate(dateString) {
-      const [month, day, year] = dateString.split("/");
+      const [day, month, year] = dateString.split("/");
       return new Date(`${year}-${month}-${day}`);
     },
-    compareRanks(firstHacka, secondHacka){
-      const rankA = this.parseRank(firstHacka.rank);
-      const rankB = this.parseRank(secondHacka.rank);
+    compareRanks(firstHacka, secondHacka) {
+      const rankA = this.parseRank(firstHacka.position);
+      const rankB = this.parseRank(secondHacka.position);
 
-      return rankB > rankA;
+      if (rankA > rankB) return 1;
+      if (rankA < rankB) return -1;
+
+      return 0;
     },
-    parseRank(rankString){
+    parseRank(rankString) {
       try {
+        if (rankString == "NA") {
+          return 4;
+        }
         return parseInt(rankString, 10);
-      }
-      catch {
+      } catch {
         return 0;
       }
     },
     filterByDate() {
-      let newHackas = this.hackathons
-      this.hackathons = newHackas.sort(this.compareDates);
-      
-      console.log(newHackas)
+      this.hackathons = this.hackathons.sort(this.compareDates);
     },
     filterByRank() {
-      let newHackas = this.hackathons
-      this.hackathons = newHackas.sort(this.compareRanks);
-      console.log(this.hackathons)
-      console.log(newHackas)
+      this.hackathons = this.hackathons.sort(this.compareRanks);
     },
   },
 };
@@ -95,8 +106,16 @@ export default {
 
   <div class="flex justify-center">
     Filtrar por:
-    <a @click="filterByDate" class="no-underline hover:underline text-cyan-600 dark:text-cyan-400 cursor-pointer ml-2">Data</a>
-    <a @click="filterByRank" class="no-underline hover:underline text-cyan-600 dark:text-cyan-400 cursor-pointer ml-2">Colocação</a>
+    <a
+      @click="filterByDate"
+      class="focus:underline hover:underline text-cyan-600 cursor-pointer ml-2"
+      >Data</a
+    >
+    <a
+      @click="filterByRank"
+      class="checked:underline hover:underline text-cyan-600 cursor-pointer ml-2"
+      >Colocação</a
+    >
   </div>
 
   <div

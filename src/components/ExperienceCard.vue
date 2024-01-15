@@ -1,13 +1,14 @@
 <script>
 export default {
   props: {
+    imgUrl: String,
     position: String,
     company: String,
     period: String,
     startDate: String,
     finalDate: String,
     text: Array,
-  },
+  }
 };
 </script>
 
@@ -20,9 +21,10 @@ export default {
         <div class="flex flex-col items-center align-middle">
           <div>
             <img
-              src="../assets/images/empresas/dwlAmbev.jpeg"
+              :src="'/images/' + imgUrl"
               alt=""
               class="rounded-full"
+              style="max-width: 44px; max-height: 44px;"
             />
             <span>{{ company }}</span>
           </div>
