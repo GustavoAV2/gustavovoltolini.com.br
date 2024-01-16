@@ -157,7 +157,7 @@ export default {
       
       <Carrousel 
       prefix="SambaMeets/Memories/"
-      images="SambaMeets-4.JPEG;SambaMeets-2.mp4;SambaMeets-3.mp4"
+      images="SambaMeets-2.mp4;SambaMeets-4.JPEG;SambaMeets-3.mp4"
       />
     </div>
   </div>
