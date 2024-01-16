@@ -1,7 +1,7 @@
 <script>
 import HeaderComponent from "../../components/shared/Header.vue";
 import HackathonInformation from "../../components/shared/HackathonInformation.vue";
-import Carrousel from "../../components/shared/Carrousel.vue"
+import Carrousel from "../../components/shared/Carrousel.vue";
 
 export default {
   data() {
