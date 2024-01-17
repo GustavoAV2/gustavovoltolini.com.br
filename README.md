@@ -1,35 +1,57 @@
-# Site Pessoal - Gustavo Voltolini
+# Gustavo Voltolini - Site Pessoal
+Este é o repositório do código-fonte do meu site pessoal. O site foi desenvolvido usando Vue.js e Vite.
 
-This template should help get you started developing with Vue 3 in Vite.
+## Instalação
+Certifique-se de ter o Node.js instalado em seu sistema antes de prosseguir.
 
-## Recommended IDE Setup
+### Clone este repositório:
+```bash
+git clone https://github.com/seu-usuario/gustavovoltolini.git
+```
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+### Acesse o diretório do projeto:
+```bash
+cd gustavovoltolini
+```
 
-## Customize configuration
-
-See [Vite Configuration Reference](https://vitejs.dev/config/).
-
-## Project Setup
-
-```sh
+### Instale as dependências:
+```bash
 npm install
 ```
 
-### Compile and Hot-Reload for Development
-
-```sh
+### Modo de Desenvolvimento
+Execute o seguinte comando para iniciar o servidor de desenvolvimento:
+```bash
 npm run dev
 ```
 
-### Compile and Minify for Production
+Isso iniciará o Vite no modo de desenvolvimento e abrirá o site em seu navegador padrão. Qualquer alteração no código será automaticamente refletida no navegador.
 
-```sh
+## Construir para Produção
+Para criar uma versão otimizada para produção do seu site, execute:
+```bash
 npm run build
 ```
+Os arquivos otimizados serão gerados no diretório dist.
 
-### Lint with [ESLint](https://eslint.org/)
+## Tecnologias Utilizadas
+* Vue.js: ^3.3.4
+* Vue Router: ^4.2.5
+* Vite: ^4.4.5
+* Tailwind CSS: ^3.3.3
 
-```sh
-npm run lint
-```
+## Estrutura do Projeto
+A estrutura do projeto segue os padrões recomendados para aplicativos Vue.js e Vite. As principais pastas são:
+
+**src**: Contém os arquivos do código-fonte do projeto.
+
+**public**: Contém os arquivos estáticos que serão servidos diretamente.
+Contribuindo
+
+Se você deseja contribuir para este projeto, sinta-se à vontade para enviar pull requests. Todas as contribuições são bem-vindas!
+
+## Autor
+Gustavo Voltolini
+
+## Licença
+Este projeto está licenciado sob a MIT License.
