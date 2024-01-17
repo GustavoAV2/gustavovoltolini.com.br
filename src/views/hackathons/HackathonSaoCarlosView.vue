@@ -78,6 +78,10 @@ export default {
       prefix="SaoCarlos/Memories/"
       images="SaoCarlos-1.jpeg;SaoCarlos-2.png;"
       />
+
+       <div class="flex flex-row text-left mt-2">
+        <a href="/hackathons" class="cursor-pointer hover:text-cyan-500">Voltar à pagina anterior...</a>
+      </div>
     </div>
   </div>
 
