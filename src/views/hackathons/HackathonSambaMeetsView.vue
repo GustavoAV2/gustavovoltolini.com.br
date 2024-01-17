@@ -159,6 +159,10 @@ export default {
       prefix="SambaMeets/Memories/"
       images="SambaMeets-2.mp4;SambaMeets-4.JPEG;SambaMeets-3.mp4"
       />
+
+      <div class="flex flex-row text-left mt-2">
+        <a href="/hackathons" class="cursor-pointer hover:text-cyan-500">Voltar à pagina anterior...</a>
+      </div>
     </div>
   </div>
 </template>

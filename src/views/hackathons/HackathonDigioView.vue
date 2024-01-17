@@ -47,7 +47,11 @@ export default {
       prefix="Digio/Memories/"
       images="Digio-1.jpeg;Digio-2.png;"
       />
+    </div>    
+
+    <div class="flex flex-row text-left mt-2">
+      <a href="/hackathons" class="cursor-pointer hover:text-cyan-500">Voltar à pagina anterior...</a>
     </div>
   </div>
-  </div>
+</div>
 </template>
