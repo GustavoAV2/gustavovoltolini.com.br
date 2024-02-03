@@ -131,17 +131,79 @@ export default {
         id="tooltip"
         class="absolute invisible z-10 ml-32 mt-7 p-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-1 dark:bg-gray-700"
       >
-        Hackathon é um evento que reúne programadores<br> 
-        e outros profissionais ligados ao desenvolvimento<br>
-        de software para uma maratona de programação,<br>
-        cujo objetivo é desenvolver um software ou solução <br>
+        Hackathon é um evento que reúne programadores<br />
+        e outros profissionais ligados ao desenvolvimento<br />
+        de software para uma maratona de programação,<br />
+        cujo objetivo é desenvolver um software ou solução <br />
         tecnológica que atenda a um fim específico.
       </div>
     </div>
 
     <div class="flex flex-row">
-      Filtro
-      <img src="filter.png" class="w-6 h-6 ml-1 cursor-pointer" alt="" />
+      <!-- Filtro
+      <img src="filter.png" class="w-6 h-6 ml-1 cursor-pointer" alt="" /> -->
+
+      <div class="relative inline-block text-left">
+        <div>
+          <button
+            type="button"
+            class="group inline-flex justify-center text-sm font-medium text-gray-700 hover:text-gray-900"
+            id="menu-button"
+            aria-expanded="false"
+            aria-haspopup="true"
+          >
+            Filtrar
+            <svg
+              class="-mr-1 ml-1 h-5 w-5 flex-shrink-0 text-gray-400 group-hover:text-gray-500"
+              viewBox="0 0 20 20"
+              fill="currentColor"
+              aria-hidden="true"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
+                clip-rule="evenodd"
+              />
+            </svg>
+          </button>
+        </div>
+
+
+        <div
+          class="absolute right-0 z-10 mt-2 w-40 origin-top-right rounded-md bg-white shadow-2xl ring-1 ring-black ring-opacity-5 focus:outline-none"
+          role="menu"
+          aria-orientation="vertical"
+          aria-labelledby="menu-button"
+          tabindex="-1"
+        >
+          <div class="py-1" role="none">
+            <a
+              href="#"
+              class="font-medium text-gray-900 block px-4 py-2 text-sm"
+              role="menuitem"
+              tabindex="-1"
+              id="menu-item-0"
+              >Popularidade</a
+            >
+            <a
+              href="#"
+              class="text-gray-500 block px-4 py-2 text-sm"
+              role="menuitem"
+              tabindex="-1"
+              id="menu-item-1"
+              >Data</a
+            >
+            <a
+              href="#"
+              class="text-gray-500 block px-4 py-2 text-sm"
+              role="menuitem"
+              tabindex="-1"
+              id="menu-item-1"
+              >Colocação</a
+            >
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 
