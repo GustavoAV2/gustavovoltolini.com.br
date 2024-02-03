@@ -6,6 +6,8 @@ export default {
   components: { HeaderComponent, HackathonCard },
   data() {
     return {
+      tooltipView: false,
+      filterOpen: false,
       hackathons: [
         {
           name: "Hackathon Samba Meets Waltz",
@@ -60,6 +62,16 @@ export default {
     };
   },
   methods: {
+    tooltipVisible() {
+      let tooltip = document.getElementById("tooltip");
+      if (this.tooltipView) {
+        this.tooltipView = false;
+        tooltip.classList.add("invisible");
+        return;
+      }
+      tooltip.classList.remove("invisible");
+      this.tooltipView = true;
+    },
     compareDates(firstHacka, secondHacka) {
       const dateA = this.parseDate(firstHacka.date);
       const dateB = this.parseDate(secondHacka.date);
@@ -104,18 +116,33 @@ export default {
 <template>
   <HeaderComponent></HeaderComponent>
 
-  <div class="flex justify-center">
-    Filtrar por:
-    <a
-      @click="filterByDate"
-      class="focus:underline hover:underline text-cyan-600 cursor-pointer ml-2"
-      >Data</a
-    >
-    <a
-      @click="filterByRank"
-      class="checked:underline hover:underline text-cyan-600 cursor-pointer ml-2"
-      >Colocação</a
-    >
+  <div class="flex justify-between ml-5 mr-5 md:ml-40 md:mr-40">
+    <div class="flex flex-row">
+      O que é um Hackathon
+      <img
+        @mouseenter="tooltipVisible()"
+        @mouseleave="tooltipVisible()"
+        src="question.png"
+        class="w-6 h-6 ml-1 cursor-pointer"
+        data-tooltip-target="tooltip-default"
+        alt="?"
+      />
+      <div
+        id="tooltip"
+        class="absolute invisible z-10 ml-32 mt-7 p-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-1 dark:bg-gray-700"
+      >
+        Hackathon é um evento que reúne programadores<br> 
+        e outros profissionais ligados ao desenvolvimento<br>
+        de software para uma maratona de programação,<br>
+        cujo objetivo é desenvolver um software ou solução <br>
+        tecnológica que atenda a um fim específico.
+      </div>
+    </div>
+
+    <div class="flex flex-row">
+      Filtro
+      <img src="filter.png" class="w-6 h-6 ml-1 cursor-pointer" alt="" />
+    </div>
   </div>
 
   <div
