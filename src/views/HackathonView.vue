@@ -6,6 +6,8 @@ export default {
   components: { HeaderComponent, HackathonCard },
   data() {
     return {
+      tooltipView: false,
+      filterView: false,
       hackathons: [
         {
           name: "Hackathon Samba Meets Waltz",
@@ -60,6 +62,16 @@ export default {
     };
   },
   methods: {
+    tooltipVisible() {
+      let tooltip = document.getElementById("tooltip");
+      if (this.tooltipView) {
+        this.tooltipView = false;
+        tooltip.classList.add("invisible");
+        return;
+      }
+      tooltip.classList.remove("invisible");
+      this.tooltipView = true;
+    },
     compareDates(firstHacka, secondHacka) {
       const dateA = this.parseDate(firstHacka.date);
       const dateB = this.parseDate(secondHacka.date);
@@ -92,10 +104,22 @@ export default {
       }
     },
     filterByDate() {
+      let el_date = document.getElementById("menu-data-filter");
+      let el_rank = document.getElementById("menu-rank-filter");
       this.hackathons = this.hackathons.sort(this.compareDates);
+      el_date.classList.add("font-medium");
+      el_date.classList.add("text-gray-900");
+      el_rank.classList.remove("font-medium");
+      el_rank.classList.remove("text-gray-900");
     },
     filterByRank() {
+      let el_date = document.getElementById("menu-data-filter");
+      let el_rank = document.getElementById("menu-rank-filter");
       this.hackathons = this.hackathons.sort(this.compareRanks);
+      el_rank.classList.add("font-medium");
+      el_rank.classList.add("text-gray-900");
+      el_date.classList.remove("font-medium");
+      el_date.classList.remove("text-gray-900");
     },
   },
 };
@@ -104,18 +128,92 @@ export default {
 <template>
   <HeaderComponent></HeaderComponent>
 
-  <div class="flex justify-center">
-    Filtrar por:
-    <a
-      @click="filterByDate"
-      class="focus:underline hover:underline text-cyan-600 cursor-pointer ml-2"
-      >Data</a
-    >
-    <a
-      @click="filterByRank"
-      class="checked:underline hover:underline text-cyan-600 cursor-pointer ml-2"
-      >Colocação</a
-    >
+  <div class="flex justify-between ml-5 mr-5 md:ml-40 md:mr-40">
+    <div class="flex flex-row">
+      O que é um Hackathon
+      <img
+        @mouseenter="tooltipVisible()"
+        @mouseleave="tooltipVisible()"
+        src="question.png"
+        class="w-6 h-6 ml-1 cursor-pointer"
+        data-tooltip-target="tooltip-default"
+        alt="?"
+      />
+      <div
+        id="tooltip"
+        class="absolute invisible z-10 ml-32 mt-7 p-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-1 dark:bg-gray-700"
+      >
+        Hackathon é um evento que reúne programadores<br />
+        e outros profissionais ligados ao desenvolvimento<br />
+        de software para uma maratona de programação,<br />
+        cujo objetivo é desenvolver um software ou solução <br />
+        tecnológica que atenda a um fim específico.
+      </div>
+    </div>
+
+    <div class="flex flex-row">
+      <!-- Filtro
+      <img src="filter.png" class="w-6 h-6 ml-1 cursor-pointer" alt="" /> -->
+
+      <div class="relative inline-block text-left">
+        <div>
+          <button
+            @click="filterView = !filterView"
+            type="button"
+            class="group inline-flex justify-center text-sm font-medium text-gray-700 hover:text-gray-900"
+            id="menu-button"
+            aria-expanded="false"
+            aria-haspopup="true"
+          >
+            Filtrar
+            <svg
+              class="-mr-1 ml-1 h-5 w-5 flex-shrink-0 text-gray-400 group-hover:text-gray-500"
+              viewBox="0 0 20 20"
+              fill="currentColor"
+              aria-hidden="true"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
+                clip-rule="evenodd"
+              />
+            </svg>
+          </button>
+        </div>
+
+
+        <template v-if="filterView">
+          <div
+            class="absolute right-0 z-10 mt-2 w-40 origin-top-right rounded-md bg-white shadow-2xl ring-1 ring-black ring-opacity-5 focus:outline-none"
+            role="menu"
+            aria-orientation="vertical"
+            aria-labelledby="menu-button"
+            tabindex="-1"
+          >
+            <div class="py-1" role="none">
+              <a
+                @click="filterByDate()"
+                href="#"
+                class="text-gray-500 block px-4 py-2 text-sm"
+                role="menuitem"
+                tabindex="-1"
+                id="menu-data-filter"
+                >Data</a
+              >
+              <a
+                @click="filterByRank()"
+                href="#"
+                class="text-gray-500 block px-4 py-2 text-sm"
+                role="menuitem"
+                tabindex="-1"
+                id="menu-rank-filter"
+                >Colocação</a
+              >
+            </div>
+          </div>
+        </template>
+      </div>
+    </div>
   </div>
 
   <div
