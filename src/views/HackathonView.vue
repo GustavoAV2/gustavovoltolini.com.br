@@ -134,7 +134,7 @@ export default {
       <img
         @mouseenter="tooltipVisible()"
         @mouseleave="tooltipVisible()"
-        src="question.png"
+        src="/question.png"
         class="w-6 h-6 ml-1 cursor-pointer"
         data-tooltip-target="tooltip-default"
         alt="?"
@@ -152,9 +152,6 @@ export default {
     </div>
 
     <div class="flex flex-row">
-      <!-- Filtro
-      <img src="filter.png" class="w-6 h-6 ml-1 cursor-pointer" alt="" /> -->
-
       <div class="relative inline-block text-left">
         <div>
           <button
