@@ -7,7 +7,7 @@ export default {
   data() {
     return {
       tooltipView: false,
-      filterOpen: false,
+      filterView: false,
       hackathons: [
         {
           name: "Hackathon Samba Meets Waltz",
@@ -104,10 +104,22 @@ export default {
       }
     },
     filterByDate() {
+      let el_date = document.getElementById("menu-data-filter");
+      let el_rank = document.getElementById("menu-rank-filter");
       this.hackathons = this.hackathons.sort(this.compareDates);
+      el_date.classList.add("font-medium");
+      el_date.classList.add("text-gray-900");
+      el_rank.classList.remove("font-medium");
+      el_rank.classList.remove("text-gray-900");
     },
     filterByRank() {
+      let el_date = document.getElementById("menu-data-filter");
+      let el_rank = document.getElementById("menu-rank-filter");
       this.hackathons = this.hackathons.sort(this.compareRanks);
+      el_rank.classList.add("font-medium");
+      el_rank.classList.add("text-gray-900");
+      el_date.classList.remove("font-medium");
+      el_date.classList.remove("text-gray-900");
     },
   },
 };
@@ -146,6 +158,7 @@ export default {
       <div class="relative inline-block text-left">
         <div>
           <button
+            @click="filterView = !filterView"
             type="button"
             class="group inline-flex justify-center text-sm font-medium text-gray-700 hover:text-gray-900"
             id="menu-button"
@@ -169,40 +182,36 @@ export default {
         </div>
 
 
-        <div
-          class="absolute right-0 z-10 mt-2 w-40 origin-top-right rounded-md bg-white shadow-2xl ring-1 ring-black ring-opacity-5 focus:outline-none"
-          role="menu"
-          aria-orientation="vertical"
-          aria-labelledby="menu-button"
-          tabindex="-1"
-        >
-          <div class="py-1" role="none">
-            <a
-              href="#"
-              class="font-medium text-gray-900 block px-4 py-2 text-sm"
-              role="menuitem"
-              tabindex="-1"
-              id="menu-item-0"
-              >Popularidade</a
-            >
-            <a
-              href="#"
-              class="text-gray-500 block px-4 py-2 text-sm"
-              role="menuitem"
-              tabindex="-1"
-              id="menu-item-1"
-              >Data</a
-            >
-            <a
-              href="#"
-              class="text-gray-500 block px-4 py-2 text-sm"
-              role="menuitem"
-              tabindex="-1"
-              id="menu-item-1"
-              >Colocação</a
-            >
+        <template v-if="filterView">
+          <div
+            class="absolute right-0 z-10 mt-2 w-40 origin-top-right rounded-md bg-white shadow-2xl ring-1 ring-black ring-opacity-5 focus:outline-none"
+            role="menu"
+            aria-orientation="vertical"
+            aria-labelledby="menu-button"
+            tabindex="-1"
+          >
+            <div class="py-1" role="none">
+              <a
+                @click="filterByDate()"
+                href="#"
+                class="text-gray-500 block px-4 py-2 text-sm"
+                role="menuitem"
+                tabindex="-1"
+                id="menu-data-filter"
+                >Data</a
+              >
+              <a
+                @click="filterByRank()"
+                href="#"
+                class="text-gray-500 block px-4 py-2 text-sm"
+                role="menuitem"
+                tabindex="-1"
+                id="menu-rank-filter"
+                >Colocação</a
+              >
+            </div>
           </div>
-        </div>
+        </template>
       </div>
     </div>
   </div>
