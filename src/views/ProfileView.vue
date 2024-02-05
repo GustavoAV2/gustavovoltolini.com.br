@@ -11,8 +11,6 @@ export default {
       let name = "GustavoVoltolini.pdf";
       let uri = "/docs/GustavoVoltolini.pdf";
       var link = document.createElement("a");
-      // If you don't know the name or want to use
-      // the webserver default set name = ''
       link.setAttribute("download", name);
       link.href = uri;
       document.body.appendChild(link);
@@ -72,7 +70,7 @@ export default {
               <!-- Start About Me Block -->
               <h2 class="block-title text-xl">Sobre</h2>
               <p class="text-gray-600">
-                Desenvolvedor Back-End há mais de três anos, apaixonado por
+                Desenvolvedor Back-End há mais de quatro anos, apaixonado por
                 desafios e em busca constante de evolução. Especializado em
                 Python e .NET, participei do desenvolvimento de projetos que
                 impactaram mais de 240 mil clientes. Atualmente, sou membro da
