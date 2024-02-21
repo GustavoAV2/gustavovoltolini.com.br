@@ -111,7 +111,7 @@ export default {
       el_date.classList.add("text-gray-900");
       el_rank.classList.remove("font-medium");
       el_rank.classList.remove("text-gray-900");
-      this.tooltipVisible();
+      this.filterView = false;
     },
     filterByRank() {
       let el_date = document.getElementById("menu-data-filter");
@@ -121,7 +121,7 @@ export default {
       el_rank.classList.add("text-gray-900");
       el_date.classList.remove("font-medium");
       el_date.classList.remove("text-gray-900");
-      this.tooltipVisible();
+      this.filterView = false;
     },
   },
 };
