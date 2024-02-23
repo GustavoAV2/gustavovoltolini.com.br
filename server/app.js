@@ -1,30 +1,33 @@
-import {getVisitors, postVisitor} from './visitorsService.js';
 import express from "express";
+import cors from "cors";
+import bodyParser from "body-parser";
+import { getVisitors, postVisitor } from "./visitorsService.js";
 
-var app = express();
+const app = express();
 
-app.use((req, res, next) => {
-  const token = req.headers.authorization;
-  const expectedToken = '**********';
+app.use(cors());
+app.use(bodyParser.json());
 
-  if (token === expectedToken) {
-      next();
-  } else {
-      res.status(401).json({ error: 'Unauthorized' });
+app.get("/visitor", async function (req, res) {
+  try {
+    const visitors = await getVisitors();
+    res.send(visitors);
+  } catch (error) {
+    res.status(500).send({ error: "Internal server error" });
   }
 });
 
-
-app.get("/visitor", async function (req, res) {
-    let visitors = await getVisitors();
-    res.send(visitors);
-});
-
 app.post("/visitor", async function (req, res) {
-    let visitors = await postVisitor(req.body);
+  try {
+    const newVisitor = req.body;
+    const visitors = await postVisitor(newVisitor);
     res.send(visitors);
+  } catch (error) {
+    res.status(500).send({ error: "Internal server error" });
+  }
 });
 
-app.listen(3000, function () {
-  console.log("Api listening on port 3000!");
+const PORT = 3000;
+app.listen(PORT, () => {
+  console.log(`Server is running on http://localhost:${PORT}`);
 });
