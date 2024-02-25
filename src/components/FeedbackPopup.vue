@@ -8,7 +8,8 @@ export default {
       showPopup: false,
       visitor: {
         name: "",
-        message: "",
+        contact: "",
+        message: ""
       },
     };
   },
@@ -127,6 +128,22 @@ export default {
               placeholder="Seu nome..."
               required
             />
+
+            <label
+              for="name"
+              class="block mb-1 text-sm font-medium text-gray-900 dark:text-white"
+              >Contato</label
+            >
+            <input
+              v-model="visitor.contact"
+              type="text"
+              name="contact"
+              id="contact"
+              class="bg-gray-50 bemail ou telefoner border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
+              placeholder="Seu email ou telefone..."
+              required
+            />
+
             <label
               for="message"
               class="block mt-2 mb-1 text-sm font-medium text-gray-900 dark:text-white"
