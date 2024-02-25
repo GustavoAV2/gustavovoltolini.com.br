@@ -8,16 +8,8 @@ export default {
       showPopup: false,
       visitor: {
         name: "",
-<<<<<<< Updated upstream
         contact: "",
-        message: ""
-=======
-<<<<<<< Updated upstream
-=======
-        contact: "",
->>>>>>> Stashed changes
         message: "",
->>>>>>> Stashed changes
       },
     };
   },
@@ -32,7 +24,8 @@ export default {
       axios
         .post("http://localhost:3000/visitor", {
           name: this.visitor.name,
-          message: this.visitor.message,
+          contact: this.visitor.contact,
+          description: this.visitor.description,
         })
         .then(() => {
           this.toThank();
@@ -153,14 +146,14 @@ export default {
             />
 
             <label
-              for="message"
+              for="description"
               class="block mt-2 mb-1 text-sm font-medium text-gray-900 dark:text-white"
               >Mensagem</label
             >
             <textarea
-              v-model="visitor.message"
-              name="message"
-              id="message"
+              v-model="visitor.description"
+              name="description"
+              id="description"
               cols="30"
               rows="10"
               placeholder="Sua mensagem..."
