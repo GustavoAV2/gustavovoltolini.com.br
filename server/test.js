@@ -1,9 +1,15 @@
+import { createVisitorTable, getVisitors, postVisitor } from './visitorsService.js'
+
 async function main() {
     try {
-        const visitors = await getVisitors();
+        const visitors = await getVisitors()
+        .catch(() => {
+            createVisitorTable();
+            console.log('Table Visitor created.');
+        });
         console.log('Visitors:', visitors);
         
-        await postVisitor({ name: 'New Visitor', ip: '192.168.0.4', message: 'Hello!' });
+        await postVisitor({ name: 'New Visitor', contact: 'email@gmail.com', message: 'Hello!' });
         console.log('Visitor added successfully.');
 
         const updatedVisitors = await getVisitors();
