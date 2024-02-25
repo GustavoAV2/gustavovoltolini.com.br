@@ -1,8 +1,9 @@
 <script>
 import HeaderComponent from "../components/shared/Header.vue";
+import FeedbackPopup from "../components/FeedbackPopup.vue";
 
 export default {
-  components: { HeaderComponent },
+  components: { HeaderComponent, FeedbackPopup },
   data() {
     return {
       count: 0,
@@ -45,6 +46,7 @@ export default {
 
 <template>
   <HeaderComponent></HeaderComponent>
+  <FeedbackPopup></FeedbackPopup>
   <div
     class="flex w-full h-full md:flex md:w-auto justify-center align-middle mt-48"
   >
