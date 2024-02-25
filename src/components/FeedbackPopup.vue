@@ -8,8 +8,16 @@ export default {
       showPopup: false,
       visitor: {
         name: "",
+<<<<<<< Updated upstream
         contact: "",
         message: ""
+=======
+<<<<<<< Updated upstream
+=======
+        contact: "",
+>>>>>>> Stashed changes
+        message: "",
+>>>>>>> Stashed changes
       },
     };
   },
@@ -37,7 +45,7 @@ export default {
           console.log(err);
           setTimeout(() => {
             this.closePopup();
-          }, 1000);
+          }, 180000);
         });
     },
   },
