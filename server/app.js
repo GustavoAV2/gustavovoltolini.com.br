@@ -8,7 +8,7 @@ const app = express();
 app.use(cors());
 app.use(bodyParser.json());
 
-app.get("/visitor", async function (req, res) {
+app.get("api/visitor", async function (req, res) {
   try {
     const visitors = await getVisitors();
     res.send(visitors);
@@ -17,7 +17,7 @@ app.get("/visitor", async function (req, res) {
   }
 });
 
-app.post("/visitor", async function (req, res) {
+app.post("api/visitor", async function (req, res) {
   try {
     const newVisitor = req.body;
     const visitors = await postVisitor(newVisitor);
