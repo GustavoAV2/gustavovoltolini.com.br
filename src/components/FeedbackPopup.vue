@@ -22,7 +22,7 @@ export default {
     },
     postNewVisitor() {
       axios
-        .post("http://localhost:3000/visitor", {
+        .post("http://localhost:3000/api/visitor", {
           name: this.visitor.name,
           contact: this.visitor.contact,
           description: this.visitor.description,
