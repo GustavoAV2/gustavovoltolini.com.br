@@ -31,24 +31,24 @@ export default {
           this.toThank();
           setTimeout(() => {
             this.closePopup();
-          }, 1000);
+          }, 2000);
         })
         .catch((err) => {
           this.toThank();
           console.log(err);
           setTimeout(() => {
             this.closePopup();
-          }, 180000);
+          }, 2000);
         });
     },
   },
   created() {
-    let feedbackRequested = localStorage.getItem("feedbackRequestede", false);
+    let feedbackRequested = localStorage.getItem("feedbackRequested", false);
     if (feedbackRequested == null || feedbackRequested == false) {
       setTimeout(() => {
         this.showPopup = true;
         localStorage.setItem("feedbackRequested", true);
-      }, 16000);
+      }, 180000);
     }
   },
 };
