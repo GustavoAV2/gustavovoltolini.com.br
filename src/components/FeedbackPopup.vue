@@ -44,12 +44,12 @@ export default {
   },
   created() {
     let feedbackRequested = localStorage.getItem("feedbackRequested", false);
-    // if (feedbackRequested == null || feedbackRequested == false) {
-    //   setTimeout(() => {
-    //     this.showPopup = true;
-    //     localStorage.setItem("feedbackRequested", true);
-    //   }, 180000);
-    // }
+    if (feedbackRequested == null || feedbackRequested == false) {
+      setTimeout(() => {
+        this.showPopup = true;
+        localStorage.setItem("feedbackRequested", true);
+      }, 180000);
+    }
   },
 };
 </script>
