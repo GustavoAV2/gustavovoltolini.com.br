@@ -22,7 +22,7 @@ export default {
     },
     postNewVisitor() {
       axios
-        .post("http://localhost:3000/visitor", {
+        .post("http://localhost:3000/api/visitor", {
           name: this.visitor.name,
           contact: this.visitor.contact,
           description: this.visitor.description,
@@ -44,12 +44,12 @@ export default {
   },
   created() {
     let feedbackRequested = localStorage.getItem("feedbackRequested", false);
-    // if (feedbackRequested == null || feedbackRequested == false) {
-    //   setTimeout(() => {
-    //     this.showPopup = true;
-    //     localStorage.setItem("feedbackRequested", true);
-    //   }, 180000);
-    // }
+    if (feedbackRequested == null || feedbackRequested == false) {
+      setTimeout(() => {
+        this.showPopup = true;
+        localStorage.setItem("feedbackRequested", true);
+      }, 180000);
+    }
   },
 };
 </script>
