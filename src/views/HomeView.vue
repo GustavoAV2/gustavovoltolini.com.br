@@ -10,7 +10,7 @@ export default {
       text: "Gustavo Voltolini,",
       subtext: "",
       caracter: "|",
-      descriptions: ["Backend Developer", "Full Stack Developer"],
+      descriptions: ["Backend Developer"],
     };
   },
   created() {
