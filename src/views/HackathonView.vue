@@ -8,6 +8,8 @@ export default {
   data() {
     return {
       tooltipView: false,
+      filterIsByDate: false,
+      filterIsByRank: false,
       filterView: false,
       hackathons: [
         {
@@ -33,7 +35,7 @@ export default {
         {
           name: "Hackathon Banco Digio",
           url: "digio",
-          projectName: "Aplicação faseada de RPA para Simplificação de tarefas",
+          projectName: "Previsão de dados financeiros",
           description: "Protótipo de script com Machine Learning",
           position: "3",
           srcImage: "digio-data&analitycs.png",
@@ -105,24 +107,16 @@ export default {
       }
     },
     filterByDate() {
-      let el_date = document.getElementById("menu-data-filter");
-      let el_rank = document.getElementById("menu-rank-filter");
       this.hackathons = this.hackathons.sort(this.compareDates);
-      el_date.classList.add("font-medium");
-      el_date.classList.add("text-gray-900");
-      el_rank.classList.remove("font-medium");
-      el_rank.classList.remove("text-gray-900");
       this.filterView = false;
+      this.filterIsByDate = true;
+      this.filterIsByRank = false;
     },
     filterByRank() {
-      let el_date = document.getElementById("menu-data-filter");
-      let el_rank = document.getElementById("menu-rank-filter");
       this.hackathons = this.hackathons.sort(this.compareRanks);
-      el_rank.classList.add("font-medium");
-      el_rank.classList.add("text-gray-900");
-      el_date.classList.remove("font-medium");
-      el_date.classList.remove("text-gray-900");
       this.filterView = false;
+      this.filterIsByRank = true;
+      this.filterIsByDate = false;
     },
   },
 };
@@ -195,6 +189,7 @@ export default {
                 @click="filterByDate()"
                 href="#"
                 class="text-gray-500 block px-4 py-2 text-sm"
+                :class="{ 'text-gray-900 font-medium' : filterIsByDate}"
                 role="menuitem"
                 tabindex="-1"
                 id="menu-data-filter"
@@ -206,6 +201,7 @@ export default {
                 class="text-gray-500 block px-4 py-2 text-sm"
                 role="menuitem"
                 tabindex="-1"
+                :class="{ 'text-gray-900 font-medium' : filterIsByRank}"
                 id="menu-rank-filter"
                 >Colocação</a
               >
@@ -231,3 +227,9 @@ export default {
     ></HackathonCard>
   </div>
 </template>
+
+<style>
+.selected {
+  color: #000;
+}
+</style>

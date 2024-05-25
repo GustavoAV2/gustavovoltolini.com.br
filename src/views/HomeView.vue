@@ -9,33 +9,29 @@ export default {
       count: 0,
       text: "Gustavo Voltolini,",
       subtext: "",
-      caracter: "|",
-      descriptions: ["Backend Developer"],
+      character: "|",
+      description: "Backend Developer",
     };
   },
   created() {
-    let descIndex = 0;
-    let subtext = this.descriptions[descIndex];
+    let subtext = this.description;
     this.subtext = "";
     let index = 0;
 
-    setInterval(() => {
-      if (this.subtext.length == subtext.length) {
-        index = index - 1;
-        subtext = subtext.substring(0, index);
-        this.subtext = subtext;
-      } else {
+    var test1 = setInterval(() => {
+      if (this.subtext.length != subtext.length) {
         this.subtext += subtext[index];
         index++;
       }
-      if (subtext.length == 0) {
-        descIndex = descIndex == 0 ? 1 : 0;
-        subtext = this.descriptions[descIndex];
+      else{
+        clearInterval(test1);
+        clearInterval(test2);
+        this.character = "";
       }
-    }, 180);
+    }, 100);
 
-    setInterval(() => {
-      this.caracter = this.caracter.length > 0 ? "" : "|";
+    var test2 = setInterval(() => {
+      this.character = this.character.length > 0 ? "" : "|";
     }, 320);
   },
   beforeUnmount() {
@@ -62,7 +58,7 @@ export default {
           {{ subtext }}
         </h2>
         <h2 class="text-2xl ml-1 text-neutral-400 md:text-4xl">
-          {{ caracter }}
+          {{ character }}
         </h2>
       </div>
     </div>
