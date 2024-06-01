@@ -44,7 +44,7 @@ export default {
   },
   created() {
     let feedbackRequested = localStorage.getItem("feedbackRequested", false);
-    if (feedbackRequested == null || feedbackRequested == false) {
+    if (feedbackRequested) {
       setTimeout(() => {
         this.showPopup = true;
         localStorage.setItem("feedbackRequested", true);
