@@ -1,5 +1,5 @@
 <script>
-import axios from "axios";
+import { sendEmail } from '../tools/sendEmail.js';
 
 export default {
   data() {
@@ -21,25 +21,22 @@ export default {
       this.showPopup = false;
     },
     postNewVisitor() {
-      axios
-        .post("http://localhost:3000/api/visitor", {
-          name: this.visitor.name,
-          contact: this.visitor.contact,
-          description: this.visitor.description,
-        })
-        .then(() => {
-          this.toThank();
-          setTimeout(() => {
-            this.closePopup();
-          }, 2000);
-        })
-        .catch((err) => {
-          this.toThank();
-          console.log(err);
-          setTimeout(() => {
-            this.closePopup();
-          }, 2000);
-        });
+      let subject = $`${this.visitor.contact}\n enviou uma mensagem (Gv Site)`;
+      let message = $`${this.visitor.name}\n ${this.visitor.contact}\n ${this.visitor.message}`;
+      let status = sendEmail(subject, message);
+      if (status){
+        this.toThank();
+        setTimeout(() => {
+          this.closePopup();
+        }, 2000);
+      }
+      else{
+        this.toThank();
+        console.log(err);
+        setTimeout(() => {
+          this.closePopup();
+        }, 2000);
+      }
     },
   },
   created() {
