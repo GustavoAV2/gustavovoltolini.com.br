@@ -54,7 +54,7 @@ export default {
       setTimeout(() => {
         this.showPopup = true;
         localStorage.setItem("feedbackRequested", true);
-      }, 10);
+      }, 100000);
     }
   },
 };
