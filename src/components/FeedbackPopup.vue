@@ -1,5 +1,5 @@
 <script>
-import axios from "axios";
+import axios from 'axios';
 
 export default {
   data() {
@@ -20,26 +20,32 @@ export default {
     closePopup() {
       this.showPopup = false;
     },
-    postNewVisitor() {
-      axios
-        .post("http://localhost:3000/api/visitor", {
-          name: this.visitor.name,
-          contact: this.visitor.contact,
-          description: this.visitor.description,
-        })
-        .then(() => {
+    async postNewVisitor() {
+      try {
+        let subject = `${this.visitor.contact}\n enviou uma mensagem (Gv Site)`;
+        let message = `${this.visitor.name}\n ${this.visitor.contact}\n ${this.visitor.message}`;
+
+        let response = await axios.post("http://localhost:3000/api/visitor", { 'subject': subject, 'message': message });
+        
+        if (response.status === 200) {
           this.toThank();
           setTimeout(() => {
             this.closePopup();
           }, 2000);
-        })
-        .catch((err) => {
-          this.toThank();
-          console.log(err);
-          setTimeout(() => {
-            this.closePopup();
-          }, 2000);
-        });
+        } else {
+          this.handleError();
+        }
+      } catch (err) {
+        console.error(err);
+        this.handleError();
+      }
+    },
+
+    handleError() {
+      this.toThank();
+      setTimeout(() => {
+        this.closePopup();
+      }, 2000);
     },
   },
   created() {
@@ -48,7 +54,7 @@ export default {
       setTimeout(() => {
         this.showPopup = true;
         localStorage.setItem("feedbackRequested", true);
-      }, 180000);
+      }, 10);
     }
   },
 };
@@ -58,7 +64,7 @@ export default {
   <div
     v-if="showPopup"
     data-te-backdrop="false"
-    class="fade-in-image fixed left-0 top-36 z-50 h-full w-full overflow-y-auto overflow-x-hidden outline-none"
+    class="fade-in-image fixed left-0 top-12 z-50 h-full w-full overflow-y-auto overflow-x-hidden outline-none"
     id="popup"
     aria-hidden="true"
   >
