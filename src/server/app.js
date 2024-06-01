@@ -1,17 +1,19 @@
 import express from "express";
 import cors from "cors";
 import bodyParser from "body-parser";
+import { sendEmail } from './sendEmail.js';
 
 const app = express();
 
 app.use(cors());
 app.use(bodyParser.json());
 
-app.post("api/visitor", async function (req, res) {
+app.post("/api/visitor", async function (req, res) {
   try {
-    const newVisitor = req.body;
-    const visitors = await sendVisitor(newVisitor);
-    res.send(visitors);
+    const emailInfos = req.body;
+    console.log(emailInfos);
+    await sendEmail(emailInfos.subject, emailInfos.message);
+    res.send();
   } catch (error) {
     res.status(500).send({ error: "Internal server error" });
   }
