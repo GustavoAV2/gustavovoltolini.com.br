@@ -25,7 +25,8 @@ export default {
         let subject = `${this.visitor.contact}\n enviou uma mensagem (Gv Site)`;
         let message = `${this.visitor.name}\n ${this.visitor.contact}\n ${this.visitor.message}`;
 
-        let response = await axios.post("http://localhost:3000/api/visitor", { 'subject': subject, 'message': message });
+        let apiUrl = process.env.APP_API_URL;
+        let response = await axios.post(apiUrl, { 'subject': subject, 'message': message });
         
         if (response.status === 200) {
           this.toThank();
@@ -54,7 +55,7 @@ export default {
       setTimeout(() => {
         this.showPopup = true;
         localStorage.setItem("feedbackRequested", true);
-      }, 10);
+      }, 140);
     }
   },
 };
