@@ -1,17 +1,15 @@
 <script>
 import HeaderComponent from "../components/shared/Header.vue";
 import AboutLinks from "../components/AboutLinks.vue";
-import FeedbackPopup from "../components/FeedbackPopup.vue";
 
 export default {
-  components: { HeaderComponent, AboutLinks, FeedbackPopup },
+  components: { HeaderComponent, AboutLinks },
 };
 </script>
 
 <template>
   <div class="flex flex-col min-h-screen">
     <HeaderComponent></HeaderComponent>
-    <FeedbackPopup></FeedbackPopup>
     <AboutLinks></AboutLinks>
   </div>
 </template>

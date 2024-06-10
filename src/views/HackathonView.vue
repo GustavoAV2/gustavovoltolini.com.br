@@ -1,10 +1,9 @@
 <script>
 import HeaderComponent from "../components/shared/Header.vue";
 import HackathonCard from "../components/shared/HackathonCard.vue";
-import FeedbackPopup from "../components/FeedbackPopup.vue";
 
 export default {
-  components: { HeaderComponent, HackathonCard, FeedbackPopup },
+  components: { HeaderComponent, HackathonCard },
   data() {
     return {
       tooltipView: false,
@@ -124,7 +123,6 @@ export default {
 
 <template>
   <HeaderComponent></HeaderComponent>
-  <FeedbackPopup></FeedbackPopup>
 
   <div class="flex justify-between ml-5 mr-5 md:ml-40 md:mr-40">
     <div class="flex flex-row">
