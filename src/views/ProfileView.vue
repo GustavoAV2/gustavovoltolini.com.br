@@ -70,12 +70,11 @@ export default {
               <!-- Start About Me Block -->
               <h2 class="block-title text-xl">Sobre</h2>
               <p class="text-gray-600">
-                Desenvolvedor Back-End há mais de quatro anos, apaixonado por
-                desafios e em busca constante de evolução. Especializado em
-                Python e .NET, participei do desenvolvimento de projetos que
-                impactaram mais de 240 mil clientes. Atualmente, sou membro da
-                equipe responsável pelo ERP Gestor da Ambev, que gerencia o
-                fluxo de pedidos de mais de 170 franquias em todo o Brasil.
+                Desenvolvedor Back-End com mais de quatro anos de experiência, apaixonado por desafios
+                e em busca constante de evolução. Especialista em .NET e Python, com sólida experiência
+                no desenvolvimento de APIs, monolitos e microsserviços. Trabalhei no desenvolvimento e
+                manutenção dos principais ERP da AmbevTech, além de implementar automações que
+                impactaram mais de 240 mil clientes.
               </p>
 
               <div class="flex flex-col space-y-4">
@@ -127,18 +126,22 @@ export default {
               finalDate="O momento"
             />
             <p class="text-gray-600">
-              • Desenvolvimento do Megatron, uma solução em C# .NET 6 que
-              automatiza a resolução de chamados dos clientes da Ambev. Esse
-              produto coleta, analisa e trata chamados sem intervenção humana
-              durante todo o processo. para microsserviços.
+              • Desenvolvimento de novas funcionalidades do sistema ERP das revendas
+                Ambev, em C# .NET com SqlServer, utilizando CQRS como padrão
+                arquitetural.
             </p>
             <p class="text-gray-600">
-              • Manutenção do ERP Gestor, uma aplicação web que atende as
-              necessidades de mais de 170 franquias da Ambev, com mais de 60.000
-              pontos de vendas atendidos. Também trabalhando na migração de
-              funcionalidades legadas para microsserviços.
+              • Participação na idealização e desenvolvimento de automações end-to-end, utilizando arquitetura de microsserviços baseada em eventos e API's,
+                em C# .NET, com ServiceBus e MongoDb.
             </p>
-
+            <p class="text-gray-600">
+              • Manutenção do sistema ERP das franquias Ambev, atuando em cima de
+                microsserviços, jobs, monolitos e código legado em C# .NET e Angular.
+            </p>
+            <p class="text-gray-600">
+              • Descomissionamento de funcionalidades legadas do ERP das franquias
+                Ambev para microsserviços
+            </p>
             <div class="border-b border-gray-200 mt-2 mb-2"></div>
 
             <Experience
@@ -150,15 +153,12 @@ export default {
               finalDate="Julho 2022"
             />
             <p class="text-gray-600">
-              • Idealização e desenvolvimento do Marvin 2.0 em Python, MongoDb,
-              FastAPI, DataDog e processamento assíncrono. O Marvin 2.0
-              automatiza análises e resoluções de cenários específicos,
-              resultando em mais de 42.000 horas economizadas e mais de 300
-              requisições diárias atendidas.
+              • Idealização e desenvolvimento de automações em Python com MongoDb
+                e FastAPI, utilizando DataDog para controle de logs.
             </p>
             <p class="text-gray-600">
-              • Manutenção e aprendizado de C# .NET para o Mesh, plataforma de
-              integração com o Bees Care.
+              • Manutenção de automações em C# .NET 6 baseado em microsserviços
+                usando ServiceBus.
             </p>
 
             <div class="border-b border-gray-200 mt-2 mb-2"></div>
@@ -172,13 +172,11 @@ export default {
               finalDate="Outubro 2021"
             />
             <p class="text-gray-600">
-              • Desenvolvimento de automações para o time de suporte, reduzindo
-              o volume de chamados abertos pelos clientes B2B da Ambev.
-            </p>
-            <p class="text-gray-600">
-              • Projeto Marvin, utilizando Python, MongoDB, FastAPI e DataDog,
-              resultando em uma redução significativa no número de chamados e
-              minimizando o impacto em até 240.000 clientes.
+              • Idealização e desenvolvimento de automações e API's em Python com o
+                objetivo de reduzir o volume de chamados dos clientes B2B da Ambev.
+                Utilizei tecnologias como MongoDB, FastAPI e DataDog. Com essa ação
+                minimizamos o impacto de aproximadamente 240 mil clientes B2B, o que
+                resultou em uma redução significativa no número de chamados abertos.
             </p>
 
             <div class="border-b border-gray-200 mt-2 mb-2"></div>
@@ -192,13 +190,13 @@ export default {
               finalDate="Outubro 2020"
             />
             <p class="text-gray-600">
-              • Participação no programa Padawans, aprendendo conceitos de
-              programação, versionamento e trabalho em equipe com a metodologia
-              Scrum.
+              • Participação no programa Padawans, conceitos de programação,
+                versionamento e trabalho em equipe, com metodologia Scrum.
             </p>
             <p class="text-gray-600">
-              • Desenvolvimento de um protótipo de banco virtual utilizando
-              Python com Flask, banco de dados PostgreSQL e Vue.js no frontend.
+              • Desenvolvimento de projeto de avalição, um protótipo de banco virtual,
+                utilizando Python com Flask, banco de dados PostgreSQL e Vue.js no
+                Frontend.
             </p>
           </div>
           <!-- Start Experience Block -->
