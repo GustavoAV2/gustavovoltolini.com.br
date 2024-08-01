@@ -71,9 +71,8 @@ export default {
               <h2 class="block-title text-xl">Sobre</h2>
               <p class="text-gray-600">
                 Desenvolvedor Back-End com mais de quatro anos de experiência, apaixonado por desafios
-                e em busca constante de evolução. Especialista em .NET e Python, com sólida experiência
-                no desenvolvimento de APIs, monolitos e microsserviços. Trabalhei no desenvolvimento e
-                manutenção dos principais ERP da AmbevTech, além de implementar automações que
+                e em busca constante de evolução. Ampla experiência em .NET e Python, no desenvolvimento de APIs, microsserviços e monolitos. 
+                Trabalhei no desenvolvimento e manutenção dos principais ERP da AmbevTech, além de implementar automações que
                 impactaram mais de 240 mil clientes.
               </p>
 
