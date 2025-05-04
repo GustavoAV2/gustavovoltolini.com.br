@@ -117,6 +117,9 @@ export default {
       this.filterIsByRank = true;
       this.filterIsByDate = false;
     },
+    checkIsMobile() {
+      return window.innerWidth < 768;
+    }
   },
 };
 </script>
@@ -124,31 +127,39 @@ export default {
 <template>
   <HeaderComponent></HeaderComponent>
 
-  <div class="flex justify-between ml-5 mr-5 md:ml-40 md:mr-40">
+  <div class="flex md:flex-row flex-col justify-between ml-5 mr-5 md:ml-40 md:mr-40">
     <div class="flex flex-row">
-      O que é um Hackathon
-      <img
-        @mouseenter="tooltipVisible()"
-        @mouseleave="tooltipVisible()"
-        src="/question.png"
-        class="w-6 h-6 ml-1 cursor-pointer"
-        data-tooltip-target="tooltip-default"
-        alt="?"
-      />
-      <div
-        id="tooltip"
-        class="absolute invisible z-10 ml-32 mt-7 p-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-1 dark:bg-gray-700"
-      >
-        Hackathon é um evento que reúne programadores<br />
-        e outros profissionais ligados ao desenvolvimento<br />
-        de software para uma maratona de programação,<br />
-        cujo objetivo é desenvolver um software ou solução <br />
-        tecnológica que atenda a um fim específico.
-      </div>
-    </div>
 
-    <div class="flex flex-row">
-      <div class="relative inline-block text-left">
+      <template v-if="!checkIsMobile()">
+           O que é um Hackathon
+           <img
+             @mouseenter="tooltipVisible()"
+             @mouseleave="tooltipVisible()"
+             src="/question.png"
+             class="w-6 h-6 ml-1 cursor-pointer"
+             data-tooltip-target="tooltip-default" 
+             alt="?"
+           />
+           <div
+             id="tooltip"
+             class="absolute invisible z-10 ml-32 mt-7 p-2 text-base font-medium text-gray-600 transition-opacity duration-300 rounded-lg shadow-sm opacity-1 dark:bg-gray-700" style="background-color: #f3f4f6;"
+           >
+           Hackathon é um evento que reúne profissionais <br>
+           da área de desenvolvimento de software em uma<br>
+           maratona de programação, com o objetivo de criar<br>
+           uma solução para um fim específico em poucos dias.
+           </div>
+       </template>
+       <template v-else>
+         <div class="block md:hidden text-sm font-medium text-gray-600 rounded-lg shadow-sm p-2" style="background-color: #f3f4f6;">
+           <h1 class="text-base">O que é um Hackathon?</h1>
+           Hackathon é um evento que reúne profissionais da área de desenvolvimento de software em uma maratona de programação, com o objetivo de criar uma solução para um fim específico em poucos dias.
+         </div>
+       </template>
+    </div>
+    
+    <div class="flex flex-row" >
+      <div class="relative inline-block text-left md:mt-0 mt-2">
         <div>
           <button
             @click="filterView = !filterView"
@@ -176,7 +187,7 @@ export default {
 
         <template v-if="filterView">
           <div
-            class="absolute right-0 z-10 mt-2 w-40 origin-top-right rounded-md bg-white shadow-2xl ring-1 ring-black ring-opacity-5 focus:outline-none"
+            class="absolute md:right-0 z-10 mt-2 w-40 origin-top-right rounded-md bg-white shadow-2xl ring-1 ring-black ring-opacity-5 focus:outline-none"
             role="menu"
             aria-orientation="vertical"
             aria-labelledby="menu-button"
@@ -186,7 +197,7 @@ export default {
               <a
                 @click="filterByDate()"
                 href="#"
-                class="text-gray-500 block px-4 py-2 text-sm"
+                class="text-gray-500 block px-4 py-2  text-sm"
                 :class="{ 'text-gray-900 font-medium' : filterIsByDate}"
                 role="menuitem"
                 tabindex="-1"
