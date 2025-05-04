@@ -2,6 +2,7 @@ import { createRouter, createWebHistory } from "vue-router";
 import HomeView from "../views/HomeView.vue";
 import AboutView from "../views/AboutView.vue";
 import ProfileView from "../views/ProfileView.vue";
+import CertificationsView from "../views/CertificationsView.vue";
 import HackathonsView from "../views/HackathonView.vue";
 import HackathonSambaMeetsView from "../views/hackathons/HackathonSambaMeetsView.vue";
 import HackathonDigioView from "../views/hackathons/HackathonDigioView.vue";
@@ -52,6 +53,11 @@ const router = createRouter({
       path: "/hackathon/nasachallenges",
       name: "nasachallenges",
       component: HackathonNasaAppsChallenge,
+    },
+    {
+      path: "/certifications",
+      name: "certifications",
+      component: CertificationsView,
     },
     {
       path: "/about",
