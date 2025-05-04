@@ -157,7 +157,7 @@ export default {
       
       <Carrousel 
       prefix="SambaMeets/Memories/"
-      images="SambaMeets-2.mp4;SambaMeets-4.JPEG;SambaMeets-3.mp4"
+      images="SambaMeets-Hacka-Grupo.png;IMG_6123.MP4;"
       />
 
       <div class="flex flex-row text-left mt-2">
