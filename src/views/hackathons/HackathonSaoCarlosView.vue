@@ -39,34 +39,6 @@ export default {
     <div 
       class="flex flex-col pt-[0.7rem] md:p-40 pb-3 md:pt-[0.7rem] text-center text-xl w-full"
     >
-      <!-- <dt
-        class="opacity-100 font-bold uppercase tracking-widest text-sm md:text-lg mb-1"
-      >
-        Flow (Solução apresentada)
-      </dt>
-      <p class="text-left">
-        ...
-      </p>
-
-      <dt
-        class="opacity-100 font-bold uppercase tracking-widest text-xs mb-1 text-left"
-      >
-        API :
-      </dt>
-      <p class="text-left">
-        API desenvolvida em C# ASP .NET Core 7, que alimenta e consome o banco
-        de dados SQL.
-      </p>
-      <br />
-
-      <dt
-        class="opacity-100 font-bold uppercase tracking-widest text-xs mb-1 text-left"
-      >
-        Interface para o usuário (Frontend):
-      </dt>
-      <p class="text-left">
-        Interface frontend desenvolvida com React e Tailwind.
-      </p> -->
 
       <div class="pt-[2rem] flex justify-center " id="media">
         <h2 class="opacity-100 font-bold uppercase tracking-widest text-sm md:text-lg mb-1">
