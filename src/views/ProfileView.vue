@@ -220,8 +220,8 @@ export default {
             <Education
               course="Curso Técnico Integrado, Informática"
               university="Cedup Hermann Hering"
-              startDate="Janeiro de 2018"
-              finalDate="Dezembro de 2020"
+              startDate="2018"
+              finalDate="2020"
             />
           </div>
           <!-- Start Education Block -->
