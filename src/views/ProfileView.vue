@@ -211,8 +211,8 @@ export default {
             <Education
               course="Bacharelado Engenharia de Software"
               university="Unicesumar"
-              startDate="Janeiro de 2022"
-              finalDate="Dezembro de 2025"
+              startDate="2022"
+              finalDate="2026"
             />
 
             <div class="border-b border-gray-200 mt-2 mb-2"></div>
