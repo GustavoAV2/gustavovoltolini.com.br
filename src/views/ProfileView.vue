@@ -70,10 +70,11 @@ export default {
               <!-- Start About Me Block -->
               <h2 class="block-title text-xl">Sobre</h2>
               <p class="text-gray-600">
-                Desenvolvedor Back-End com mais de quatro anos de experiência, apaixonado por desafios
-                e em busca constante de evolução. Ampla experiência em .NET e Python, no desenvolvimento de APIs, microsserviços e monolitos. 
-                Trabalhei no desenvolvimento e manutenção dos principais ERP da AmbevTech, além de implementar automações que
-                impactaram mais de 240 mil clientes.
+                Desenvolvedor Back-End com 4+ anos de experiência, atuando com .NET,  C#, Python, SQL
+                Server e MongoDB. Com sólida vivência em desafios de grande escala, como
+                no desenvolvimento e manutenção dos ERPs da Ambev. Experiência completa no ciclo de
+                desenvolvimento de software, desde o levantamento de requisitos até a entrega de soluções
+                escaláveis e sustentáveis.
               </p>
 
               <div class="flex flex-col space-y-4">
@@ -105,12 +106,12 @@ export default {
           </div>
 
           <!-- Start Skills Block -->
-          <Skills></Skills>
+          <!-- <Skills></Skills> REMOVIDO TEMPORARIAMENTE-->
+          <!-- <div class="pl-2 pr-2 pb-5">
+            <div class="border-t border-gray-200"></div>
+          </div> -->
           <!-- End Skills Block -->
 
-          <div class="pl-2 pr-2 pb-5">
-            <div class="border-t border-gray-200"></div>
-          </div>
 
           <div class="block-section p-2">
             <!-- Start Experience Block -->
