@@ -17,6 +17,10 @@ export default {
           skillIcon: "devicon-csharp-plain",
         },
         {
+          skillName: ".NET",
+          skillIcon: "devicon-dotnetcore-plain",
+        },
+        {
           skillName: "Python",
           skillIcon: "devicon-python-plain",
         },
@@ -25,8 +29,12 @@ export default {
           skillIcon: "devicon-flask-original",
         },
         {
-          skillName: ".NET",
-          skillIcon: "devicon-dotnetcore-plain",
+          skillName: "FastAPI",
+          skillIcon: "devicon-fastapi-plain",
+        },
+        {
+          skillName: "Docker",
+          skillIcon: "devicon-docker-plain",
         },
         {
           skillName: "Vue",
@@ -48,7 +56,6 @@ export default {
 
 <template>
   <div class="block-section flow-root p-2 pb-0">
-    <!-- Start Skills Block -->
     <h2 class="block-title text-xl">Habilidades</h2>
     <template v-if="!isMobile()">
       <div class="flex flex-row flex-wrap justify-between pt-2 pb-2">
