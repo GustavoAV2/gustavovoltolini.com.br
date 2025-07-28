@@ -18,7 +18,7 @@ export default {
           description:
             "Nexus conecta talentos no campo de microeletrônica e semicondutores a empresas em busca de seus talentos, enquanto também oferece uma comunidade ao redor deles. O usuário que procura conhecimento no campo, exposição a empresas ou contribuir para a comunidade pode acessar o aplicativo por meio de qualquer navegador.",
           position: "3",
-          srcImage: "nexus.png",
+          srcImage: "samba-meets/nexus.png",
           date: "05/09/2023",
         },
         {
@@ -28,7 +28,7 @@ export default {
           description:
             "Processamento de REMESSA CNAB 750 e criação de cobranças e QRCode",
           position: "2",
-          srcImage: "easyb2b-citi.png",
+          srcImage: "citi/easyb2b-citi.png",
           date: "18/06/2023",
         },
         {
@@ -37,7 +37,7 @@ export default {
           projectName: "Previsão de dados financeiros",
           description: "Protótipo de script com Machine Learning",
           position: "3",
-          srcImage: "digio-data&analitycs.png",
+          srcImage: "digio/digio-data&analitycs.png",
           date: "11/11/2022",
         },
         {
@@ -47,7 +47,7 @@ export default {
           description:
             "Aplicação faseada para simplificar os processos internos da BestCenter, a empresa patrocinadora do Hackathon.",
           position: "1",
-          srcImage: "saocarlos.png",
+          srcImage: "sao-carlos/saocarlos.png",
           date: "04/11/2021",
         },
         {
@@ -57,7 +57,7 @@ export default {
           description:
             "Este projeto visa criar uma plataforma online que conecta instituições públicas e seus projetos sociais com colaboradores em potencial.",
           position: "NA",
-          srcImage: "nasachallenge.png",
+          srcImage: "nasa-app-challenge/nasachallenge.png",
           date: "09/10/2023",
         },
       ],
@@ -135,7 +135,7 @@ export default {
            <img
              @mouseenter="tooltipVisible()"
              @mouseleave="tooltipVisible()"
-             src="/question.png"
+             src="images/icons/question.png"
              class="w-6 h-6 ml-1 cursor-pointer"
              data-tooltip-target="tooltip-default" 
              alt="?"

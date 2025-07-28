@@ -72,7 +72,7 @@ export default {
 
       <div class="flex items-center justify-center">
         <img
-          src="/images/SambaMeets/NexusMap.jpg"
+          src="/images/hackathons/samba-meets/project/NexusMap.jpg"
           alt=""
           class="md:w-11/12 mt-2"
           width="100%"
@@ -108,7 +108,7 @@ export default {
         </dt>
 
         <img
-          src="/images/SambaMeets/2Profile.png"
+          src="/images/hackathons/samba-meets/project/2Profile.png"
           alt="Perfil"
           class="md:w-11/12 shadow-md"
         />
@@ -120,7 +120,7 @@ export default {
         </dt>
 
         <img
-          src="/images/SambaMeets/7FindProject.png"
+          src="/images/hackathons/samba-meets/project/7FindProject.png"
           alt="Buscar projetos"
           class="md:w-11/12 shadow-md"
         />
@@ -131,7 +131,7 @@ export default {
           Projetos:
         </dt>
         <img
-          src="/images/SambaMeets/8FindTalent.png"
+          src="/images/hackathons/samba-meets/project/8FindTalent.png"
           alt="Buscar talentos"
           class="md:w-11/12 shadow-md"
         />
@@ -143,7 +143,7 @@ export default {
         </dt>
 
         <img
-          src="/images/SambaMeets/9FindTalent.png"
+          src="/images/hackathons/samba-meets/project/9FindTalent.png"
           alt="Buscar talentos"
           class="md:w-11/12 shadow-md"
         />
@@ -156,7 +156,7 @@ export default {
       </div>
       
       <Carrousel 
-      prefix="SambaMeets/Memories/"
+      prefix="hackathons/samba-meets/"
       images="SambaMeets-Hacka-Grupo.png;IMG_6123.MP4;"
       />
 

@@ -33,17 +33,28 @@ export default {
           aria-current="page"
           >Resumo</a
         >
+        
+        <template v-if="isMobile()">
+          <a
+            href="/projects"
+            class="block py-2 pl-3 p-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-5"
+            >Projetos</a
+          >
+        </template>
+        <template v-else>
+          <a
+            href="/projects"
+            class="block py-2 pl-3 p-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-5"
+            >Projetos Pessoais</a
+          >
+        </template>
 
         <a
           href="/hackathons"
           class="block py-2 pl-3 p-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-5"
           >Hackathons</a
         >
-        <!-- <a
-          href="/certifications"
-          class="block py-2 pl-3 p-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-5"
-          >Certificações</a
-        > -->
+
         <a
           href="/about"
           class="block py-2 pl-3 p-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-5"

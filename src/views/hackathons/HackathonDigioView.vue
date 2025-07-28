@@ -44,7 +44,7 @@ export default {
         Mídias do dia do evento 
       </h2>
       <Carrousel 
-      prefix="Digio/Memories/"
+      prefix="hackathons/digio/"
       images="Digio-1.jpeg;Digio-2.png;"
       />
     </div>    

@@ -44,7 +44,7 @@ export default {
       </dt>
       <div class="flex justify-center">
         <img
-          src="/images/Citi/SitiSolution-Arquitetura.jpg"
+          src="/images/hackathons/citi/project/SitiSolution-Arquitetura.jpg"
           alt=""
           class="md:w-2/5 shadow-md"
         />
@@ -61,7 +61,7 @@ export default {
       </p>
 
       <div class="flex justify-center">
-        <img src="/images/Citi/Fluxograma-Api.jpg" alt="" class="md:w-2/5 shadow-md" />
+        <img src="/images/hackathons/citi/project/Fluxograma-Api.jpg" alt="" class="md:w-2/5 shadow-md" />
       </div>
 
       <br />
@@ -80,7 +80,7 @@ export default {
 
       <div class="flex justify-center">
         <img
-          src="/images/Citi/Fluxograma-Process.jpg"
+          src="/images/hackathons/citi/project/Fluxograma-Process.jpg"
           alt=""
           class="md:w-2/5 shadow-md"
         />
@@ -97,7 +97,7 @@ export default {
           Mídias do dia do evento 
         </h2>
         <Carrousel 
-        prefix="Citi/Memories/"
+        prefix="/hackathons/citi/"
         images="Citi-1.JPEG;Citi-2.JPEG"
         />
       </div>

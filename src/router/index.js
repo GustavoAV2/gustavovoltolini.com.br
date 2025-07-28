@@ -2,7 +2,6 @@ import { createRouter, createWebHistory } from "vue-router";
 import HomeView from "../views/HomeView.vue";
 import AboutView from "../views/AboutView.vue";
 import ProfileView from "../views/ProfileView.vue";
-import CertificationsView from "../views/CertificationsView.vue";
 import HackathonsView from "../views/HackathonView.vue";
 import HackathonSambaMeetsView from "../views/hackathons/HackathonSambaMeetsView.vue";
 import HackathonDigioView from "../views/hackathons/HackathonDigioView.vue";
@@ -10,6 +9,7 @@ import HackathonCitiView from "../views/hackathons/HackathonCitiView.vue";
 import HackathonSaoCarlosView from "../views/hackathons/HackathonSaoCarlosView.vue";
 import HackathonNasaAppsChallenge from "../views/hackathons/HackathonNasaAppsChallenge.vue";
 import PageNotFoundView from "../views/PageNotFoundView.vue";
+import ProjectsView from "../views/ProjectsView.vue";
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -23,6 +23,11 @@ const router = createRouter({
       path: "/profile",
       name: "profile",
       component: ProfileView,
+    },
+    {
+      path: "/projects",
+      name: "projects",
+      component: ProjectsView,
     },
     {
       path: "/hackathons",
@@ -53,11 +58,6 @@ const router = createRouter({
       path: "/hackathon/nasachallenges",
       name: "nasachallenges",
       component: HackathonNasaAppsChallenge,
-    },
-    {
-      path: "/certifications",
-      name: "certifications",
-      component: CertificationsView,
     },
     {
       path: "/about",

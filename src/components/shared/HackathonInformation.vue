@@ -101,7 +101,7 @@ export default {
             class="flex items-center gap-2 rounded-2xl p-4 m-0 pt-0 pb-0 border border-[#181717] text-[#181717] hover:bg-[#181717] hover:text-[#F6F8FA]"
           >
             Mídias do evento
-            <img src="/images/camera.svg" height="16" width="16" alt="" />
+            <img src="/images/icons/camera.svg" height="16" width="16" alt="" />
           </a>
         </div>
 
@@ -113,7 +113,7 @@ export default {
             class="flex items-center gap-2 rounded-2xl p-4 m-0 pt-0 pb-0 border border-[#181717] text-[#181717] hover:bg-[#181717] hover:text-[#F6F8FA]"
           >
             Video apresentação
-            <img src="/images/youtube.svg" height="16" width="16" alt="" />
+            <img src="/images/icons/youtube.svg" height="16" width="16" alt="" />
           </a>
         </div>
 
@@ -157,3 +157,19 @@ export default {
     </div>
   </div>
 </template>
+<style>
+.first-position {
+    color: #FFD700;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+}
+
+.second-position {
+    color: #C0C0C0;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+}
+
+.third-position {
+    color: #CD7F32;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+}
+</style>
