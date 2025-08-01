@@ -22,13 +22,13 @@ export default {
           link: "https://www.nivelo.app.br",
         },
         {
-          name: "Solução de IA para Análise de Backlog",
+          name: "Análise de Backlog com IA",
           projectName: "Devops Synergy AI",
           url: "devops-synergy-ai",
           description:
             "Iniciativa interna liderada por mim para desenvolver uma ferramenta de IA que analisa cards de backlog, identificando padrões, sugerindo otimizações e prevendo gargalos no fluxo de trabalho.",
           srcImage: "devops-ia/devops-ia.png",
-          date: "20/09/2023",
+          date: "25/07/2025",
           technologies: ["Python", "Anthropic API", "AzureDevops API"],
           link: "#",
         }
@@ -79,19 +79,19 @@ export default {
   <div class="flex md:flex-row flex-col justify-between ml-5 mr-5 md:ml-40 md:mr-40">
     <div class="flex flex-row">
       <template v-if="!checkIsMobile()">
-           O que são Iniciativas Independentes?
-           <img
-             @mouseenter="tooltipVisible()"
-             @mouseleave="tooltipVisible()"
-             src="images/icons/question.png"
-             class="w-6 h-6 ml-1 cursor-pointer"
-             data-tooltip-target="tooltip-default"
-             alt="?"
-           />
-           <div
-             id="tooltip"
-             class="absolute invisible z-10 ml-32 mt-7 p-2 text-base font-medium text-gray-600 transition-opacity duration-300 rounded-lg shadow-sm opacity-1 dark:bg-gray-700" style="background-color: #f3f4f6;"
-           >
+        O que são Iniciativas Independentes?
+        <img
+          @mouseenter="tooltipVisible()"
+          @mouseleave="tooltipVisible()"
+          src="images/icons/question.png"
+          class="w-6 h-6 ml-1 cursor-pointer"
+          data-tooltip-target="tooltip-default"
+          alt="?"
+        />
+        <div
+          id="tooltip"
+          class="absolute invisible z-10 ml-32 mt-7 p-2 text-base font-medium text-gray-600 transition-opacity duration-300 rounded-lg shadow-sm opacity-1 dark:bg-gray-700" style="background-color: #f3f4f6;"
+        > 
            Iniciativas Independentes são projetos desenvolvidos por conta própria, <br>
            movidos por paixão e curiosidade. Isso inclui desde criações pessoais <br>
            lançadas publicamente até soluções inovadoras concebidas e lideradas <br>
