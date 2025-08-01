@@ -71,7 +71,7 @@ export default {
   <div class="flex md:flex-row flex-col justify-between ml-5 mr-5 md:ml-40 md:mr-40">
     <div class="flex flex-row">
       <template v-if="!checkIsMobile()">
-        O que são Iniciativas Independentes?
+        O que são estes projetos pessoais?
         <img
           @mouseenter="tooltipVisible()"
           @mouseleave="tooltipVisible()"
@@ -82,10 +82,9 @@ export default {
         />
         <div
           id="tooltip"
-          class="absolute invisible z-10 ml-32 mt-7 p-2 text-base font-medium text-gray-600 transition-opacity duration-300 rounded-lg shadow-sm opacity-1 dark:bg-gray-700" style="background-color: #f3f4f6;"
-        > 
-           Iniciativas Independentes são projetos desenvolvidos por conta própria, <br>
-           movidos por paixão e curiosidade. Isso inclui desde criações pessoais <br>
+          class="absolute invisible z-10 ml-32 mt-7 p-2 text-base font-medium text-gray-600 transition-opacity duration-300 rounded-lg shadow-sm opacity-1 dark:bg-gray-700" style="background-color: #f3f4f6;"> 
+           Iniciativas Independentes desenvolvidas por conta própria, <br>
+           movidos por paixão e curiosidade. Desde criações pessoais <br>
            lançadas publicamente até soluções inovadoras concebidas e lideradas <br>
            fora das responsabilidades de trabalho regulares, com o objetivo de <br>
            explorar novas tecnologias, resolver desafios e gerar impacto.
