@@ -135,7 +135,7 @@ export default {
            <img
              @mouseenter="tooltipVisible()"
              @mouseleave="tooltipVisible()"
-             src="images/icons/question.png"
+             src="/images/icons/question.png"
              class="w-6 h-6 ml-1 cursor-pointer"
              data-tooltip-target="tooltip-default" 
              alt="?"
