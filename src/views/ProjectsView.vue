@@ -83,7 +83,7 @@ export default {
         <div
           id="tooltip"
           class="absolute invisible z-10 ml-32 mt-7 p-2 text-base font-medium text-gray-600 transition-opacity duration-300 rounded-lg shadow-sm opacity-1 dark:bg-gray-700" style="background-color: #f3f4f6;"> 
-           Iniciativas Independentes desenvolvidas por conta própria, <br>
+           Iniciativas independentes desenvolvidas por conta própria, <br>
            movidos por paixão e curiosidade. Desde criações pessoais <br>
            lançadas publicamente até soluções inovadoras concebidas e lideradas <br>
            fora das responsabilidades de trabalho regulares, com o objetivo de <br>
@@ -92,8 +92,8 @@ export default {
        </template>
        <template v-else>
          <div class="block md:hidden text-sm font-medium text-gray-600 rounded-lg shadow-sm p-2" style="background-color: #f3f4f6;">
-           <h1 class="text-base">O que são Iniciativas Independentes?</h1>
-           Iniciativas Independentes são projetos desenvolvidos por conta própria, movidos por paixão e curiosidade. Isso inclui desde criações pessoais lançadas publicamente até soluções inovadoras concebidas e lideradas fora das responsabilidades de trabalho regulares, com o objetivo de explorar novas tecnologias, resolver desafios e gerar impacto.
+           <h1 class="text-base">O que são estes projetos pessoais?</h1>
+           Iniciativas independentes desenvolvidas por conta própria, movidos por paixão e curiosidade. Desde criações pessoais lançadas publicamente até soluções inovadoras concebidas e lideradas fora das responsabilidades de trabalho regulares, com o objetivo de explorar novas tecnologias, resolver desafios e gerar impacto.
          </div>
        </template>
     </div>
