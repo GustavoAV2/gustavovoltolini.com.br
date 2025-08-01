@@ -17,7 +17,7 @@ export default {
           description:
             "Um aplicativo mobile desenvolvido para auxiliar usuários no controle financeiro pessoal, com funcionalidades de categorização de despesas, orçamentos e relatórios. Lançado em produção com base de usuários ativa.",
           srcImage: "nivelo/nivelo-logo.png",
-          date: "15/03/2024",
+          date: "15/05/2025",
           technologies: ["Next.JS", "Supabase", "PostgreSQL", "Vercel"],
           link: "https://www.nivelo.app.br",
         },
@@ -29,9 +29,9 @@ export default {
             "Iniciativa interna liderada por mim para desenvolver uma ferramenta de IA que analisa cards de backlog, identificando padrões, sugerindo otimizações e prevendo gargalos no fluxo de trabalho.",
           srcImage: "devops-ia/devops-ia.png",
           date: "25/07/2025",
-          technologies: ["Python", "Anthropic API", "AzureDevops API"],
+          technologies: ["Python", "Anthropic API", "AzureDevOps REST API"],
           link: "#",
-        }
+        },
       ],
     };
   },
@@ -58,18 +58,10 @@ export default {
       const [day, month, year] = dateString.split("/");
       return new Date(`${year}-${month}-${day}`);
     },
-    filterByDate() {
-      this.projects = this.projects.sort(this.compareDates);
-      this.filterView = false;
-      this.filterIsByDate = true;
-    },
     checkIsMobile() {
       return window.innerWidth < 768;
     }
   },
-  created() {
-    this.filterByDate();
-  }
 };
 </script>
 

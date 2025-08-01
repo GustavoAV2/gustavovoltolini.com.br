@@ -1,5 +1,5 @@
 <template>
-  <div class="max-w-sm rounded overflow-hidden shadow-lg m-4 bg-white">
+  <div class="overflow-hidden rounded-3xl shadow-2xl shadow-black/30 max-w-lg md:w-96 m-4">
     <img class="w-full h-48 object-cover" :src="`/images/projects/${srcImage}`" :alt="name" />
     
     <div class="p-4">
