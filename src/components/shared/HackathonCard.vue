@@ -11,7 +11,7 @@ export default {
   },
   computed: {
     srcPath() {
-      return "/images/" + this.srcImage;
+      return "/images/hackathons/" + this.srcImage;
     },
     formattedDescription() {
       return this.description.substring(0, 70) + "...";
@@ -141,3 +141,19 @@ export default {
     </div>
   </div>
 </template>
+<style>
+.first-position {
+    color: #FFD700;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+}
+
+.second-position {
+    color: #C0C0C0;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+}
+
+.third-position {
+    color: #CD7F32;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+}
+</style>

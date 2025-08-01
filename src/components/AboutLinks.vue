@@ -42,7 +42,7 @@ export default {
         <span>gustavoant.voltolini@gmail.com</span>
         <template v-if="!copied">
           <img
-            src="../assets/images/icons/copy.png"
+            src="/images/icons/copy.png"
             alt=""
             id="copyImage"
             class="ml-2 h-7 w-7 cursor-pointer transition-opacity duration-150 eas opacity-50 hover:opacity-100"
@@ -51,7 +51,7 @@ export default {
         </template>
         <template v-else>
           <img
-            src="../assets/images/icons/check.png"
+            src="/images/icons/check.png"
             alt=""
             id="checkedImage"
             class="ml-2 w-7 cursor-pointer transition-opacity duration-150"

@@ -63,7 +63,7 @@ export default {
         </li>
       </ul>
       <div class="flex justify-center mt-1 mb-1">
-        <img src="/images/NasaAppsChallenge/feed.png" alt="" class="md:w-4/5 shadow-md" />
+        <img src="/images/hackathons/nasa-app-challenge/feed.png" alt="" class="md:w-4/5 shadow-md" />
       </div>
       <ul class="text-left">
         <li>
@@ -75,7 +75,7 @@ export default {
       </ul>
       <div class="flex justify-center mt-1 mb-1">
         <img
-          src="/images/NasaAppsChallenge/interests.png"
+          src="/images/hackathons/nasa-app-challenge/interests.png"
           alt=""
           class="md:w-4/5 shadow-md"
         />
