@@ -1,8 +1,9 @@
 <script>
 import HeaderComponent from "../components/shared/Header.vue";
+import StoryLineView from "../components/StoryLine.vue";
 
 export default {
-  components: { HeaderComponent },
+  components: { HeaderComponent, StoryLineView },
   data() {
     return {
       count: 0,
@@ -11,6 +12,11 @@ export default {
       character: "|",
       description: "Backend Developer",
     };
+  },
+  methods: {
+    checkIsMobile() {
+      return window.innerWidth < 768;
+    }
   },
   created() {
     let subtext = this.description;
@@ -41,9 +47,7 @@ export default {
 
 <template>
   <HeaderComponent></HeaderComponent>
-  <div
-    class="flex w-full h-full md:flex md:w-auto justify-center align-middle mt-48"
-  >
+  <div class="flex w-full h-full md:flex md:w-auto justify-center align-middle mt-48">
     <div class="flex flex-col align-middle h-full">
       <h1
         class="w-min text-4xl font-bold text-neutral-800 md:w-max md:text-6xl"
@@ -61,4 +65,10 @@ export default {
       </div>
     </div>
   </div>
+
+  <template v-if="!checkIsMobile()">
+      <div class="mt-72">
+        <StoryLineView></StoryLineView>
+      </div>
+  </template>
 </template>
