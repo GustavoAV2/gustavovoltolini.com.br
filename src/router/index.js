@@ -2,6 +2,7 @@ import { createRouter, createWebHistory } from "vue-router";
 import HomeView from "../views/HomeView.vue";
 import AboutView from "../views/AboutView.vue";
 import ProfileView from "../views/ProfileView.vue";
+import StoryLineView from "../views/StoryLineView.vue";
 import HackathonsView from "../views/HackathonView.vue";
 import HackathonSambaMeetsView from "../views/hackathons/HackathonSambaMeetsView.vue";
 import HackathonDigioView from "../views/hackathons/HackathonDigioView.vue";
@@ -28,6 +29,11 @@ const router = createRouter({
       path: "/projects",
       name: "projects",
       component: ProjectsView,
+    },
+    {
+      path: "/storyline",
+      name: "storyline",
+      component: StoryLineView,
     },
     {
       path: "/hackathons",

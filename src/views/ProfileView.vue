@@ -70,7 +70,7 @@ export default {
               <!-- Start About Me Block -->
               <h2 class="block-title text-xl">Sobre</h2>
               <p class="text-gray-600">
-                Desenvolvedor Back-End com 4+ anos de experiência, atuando com .NET,  C#, Python, SQL
+                Desenvolvedor Back-End com 5+ anos de experiência, atuando com .NET,  C#, Python, SQL
                 Server e MongoDB. Com sólida vivência em desafios de grande escala, como
                 no desenvolvimento e manutenção dos ERPs da Ambev. Experiência completa no ciclo de
                 desenvolvimento de software, desde o levantamento de requisitos até a entrega de soluções
