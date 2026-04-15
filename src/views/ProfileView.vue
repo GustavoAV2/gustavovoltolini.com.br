@@ -118,12 +118,25 @@ export default {
             <h2 class="block-title text-xl">Experiência</h2>
 
             <Experience
+              position="Desenvolvedor Pleno II"
+              company="Ambev Tech"
+              imgUrl="/companies/dwlAmbev.jpeg"
+              period="Tempo integral"
+              startDate="Abril 2026"
+              finalDate="O momento"
+            />
+            <p class="text-gray-600">
+              • Migrei para o time de IA Generativa da AmbevTech, onde atuo na intersecção entre engenharia de software tradicional e inovação com IA.
+            </p>
+            <div class="border-b border-gray-200 mt-2 mb-2"></div>
+
+            <Experience
               position="Desenvolvedor Pleno"
               company="Ambev Tech"
               imgUrl="/companies/dwlAmbev.jpeg"
               period="Tempo integral"
               startDate="Julho 2022"
-              finalDate="O momento"
+              finalDate="Abril 2026"
             />
             <p class="text-gray-600">
               • Desenvolvimento de novas funcionalidades do sistema ERP das revendas

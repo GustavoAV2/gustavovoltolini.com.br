@@ -22,15 +22,15 @@ export default {
           link: "https://www.nivelo.app.br",
         },
         {
-          name: "Análise de Backlog com IA",
-          projectName: "Devops Synergy AI",
-          url: "devops-synergy-ai",
+          name: "Sistema Completo de Criação de Vídeos Automatizado",
+          projectName: "Video Creator AI",
+          url: "video-creator-ai",
           description:
-            "Iniciativa interna liderada por mim para desenvolver uma ferramenta de IA que analisa cards de backlog, identificando padrões, sugerindo otimizações e prevendo gargalos no fluxo de trabalho.",
+            "Sistema end-to-end que cria automaticamente vídeos verticais (1080x1920) para YouTube Shorts, Instagram Reels e TikTok usando: CrewAI Agents para buscar conteúdo e gerar roteiro, Pexels API/Web Search para buscar mídias, Edge-TTS/ElevenLabs para narração em português, e MoviePy para montar o vídeo final com áudio sincronizado.",
           srcImage: "devops-ia/devops-ia.png",
-          date: "25/07/2025",
-          technologies: ["Python", "Anthropic API", "AzureDevOps REST API"],
-          link: "#",
+          date: "15/04/2026",
+          technologies: ["CrewAI", "ElevenLabs", "MoviePy", "Python"],
+          link: "https://tony-dashboard-sandy.vercel.app/",
         },
       ],
     };
