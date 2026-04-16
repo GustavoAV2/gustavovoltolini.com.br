@@ -26,7 +26,7 @@ export default {
           projectName: "Video Creator AI",
           url: "video-creator-ai",
           description:
-            "Sistema end-to-end que cria automaticamente vídeos verticais (1080x1920) para Redes Sociais, usando: CrewAI Agents, Web Search, Edge-TTS/ElevenLabs para narração, e MoviePy para montagem do video.",
+            "Sistema end-to-end de criação automatica de vídeos para Redes Sociais, com AI Agents, algoritmos Python e integrações.",
           srcImage: "mark/mark-vii.png",
           date: "15/04/2026",
           technologies: ["CrewAI", "ElevenLabs", "MoviePy", "Python"],
